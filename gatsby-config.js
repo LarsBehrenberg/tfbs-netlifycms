@@ -1,31 +1,54 @@
+require('dotenv').config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    title: `t.f.b.s - Telgte`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@larsbehrenberg`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+      },
+    },
     'gatsby-plugin-sass',
+    'gatsby-plugin-emotion',
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/uploads`,
         name: 'uploads',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/content/`,
+        name: 'content',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/src/images`,
         name: 'images',
       },
     },
@@ -63,6 +86,25 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'tfbs',
+        accessToken: `${process.env.API_KEY}`,
+        // Get the correct URLs in blog posts
+        linkResolver: post => `/${post.uid}`,
+        // linkResolver: post => `/${post.uid}`,
+        // PrismJS highlighting for labels and slices
+        htmlSerializer: ({ node, key, value }) => (
+          type,
+          element,
+          content,
+          children,
+        ) => {
+          // Your HTML serializer
+        },
       },
     },
     {
