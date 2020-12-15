@@ -8,6 +8,7 @@ import {
   EventsContainer,
   ImageGridText,
   ContactComponent,
+  Neuigkeiten,
 } from 'components'
 
 const IndexPage = ({ data }) => {
@@ -37,7 +38,7 @@ const IndexPage = ({ data }) => {
         button_title={hero_button_text.text}
         button_link={hero_button_link.text}
       />
-      {/* <ImageTextComponent /> */}
+      <Neuigkeiten />
       <ImageGridText />
       <SkillsContainer />
       <EventsContainer />

@@ -14,9 +14,9 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: 'ueber-uns'
-    label: 'Ueber Uns'
-    folder: 'content/ueber-uns'
+  - name: 'neuigkeiten'
+    label: 'Neuigkeiten'
+    folder: 'content/neuigkeiten'
     create: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -24,11 +24,10 @@ collections:
           label: 'Template Key',
           name: 'templateKey',
           widget: 'hidden',
-          default: 'ueber-uns',
+          default: 'neuigkeiten',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   # - name: "pages"
   #   label: "Pages"

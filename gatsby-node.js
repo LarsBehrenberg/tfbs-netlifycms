@@ -17,6 +17,9 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
   return new Promise((resolve, reject) => {
     const employeePageTemplate = path.resolve('src/templates/employee.jsx')
     const skillPageTemplate = path.resolve('src/templates/skill.jsx')
+    const neuigkeitenPageTemplate = path.resolve(
+      'src/templates/neuigkeiten.jsx',
+    )
 
     resolve(
       graphql(
@@ -47,9 +50,10 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           return reject(result.errors)
         }
 
+        // store different pages
         const employees = result.data.employees.nodes
-
         const skills = result.data.skills.nodes
+        // const neuigkeiten = result.data.neuigkeiten.nodes
 
         // create employee pages
         employees.forEach(({ data }) => {
@@ -74,16 +78,40 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
             },
           })
         })
+
+        // create neuigkeiten pages
+        // neuigkeiten.forEach(node => {
+        //   const id = node.id
+        //   createPage({
+        //     path: node.fields.slug,
+        //     component: neuigkeitenPageTemplate,
+        //     context: {
+        //       id,
+        //     },
+        //   })
+        // })
       }),
     )
   })
 }
 
+// neuigkeiten: (filter: {fileAbsolutePath: {regex: "/neuigkeiten/"}}) {
+//   nodes {
+//     id
+//     fields {
+//       slug
+//     }
+//     frontmatter {
+//       templateKey
+//     }
+//   }
+// }
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
 
-  // if (node.internal.type === `MarkdownRemark`) {
+  // if (internal.type === `MarkdownRemark`) {
   //   const value = createFilePath({ node, getNode });
   //   createNodeField({
   //     name: `slug`,

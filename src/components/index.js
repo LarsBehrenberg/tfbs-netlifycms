@@ -4,6 +4,7 @@ export { default as Button } from './Common/Button/Button'
 export { default as ContactComponent } from './Common/ContactComponent/ContactComponent'
 export { default as ContentTabs } from './Common/ContentTabs/ContentTabs'
 export { default as Hero } from './Common/Hero/Hero'
+export { default as Neuigkeiten } from './Common/Neuigkeiten/Neuigkeiten'
 
 // Index page
 export { default as SkillsContainer } from './IndexPage/Skills/SkillsContainer'

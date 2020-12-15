@@ -1,6 +1,7 @@
 ---
-templateKey: ueber-uns
-title: Angelika Behrenberg
+templateKey: neuigkeiten
+slug: corona
+title: Corona Massnahmen
 ---
 
 ### I have always been fascinated by British history.
@@ -10,5 +11,3 @@ But I found it inaccessible: for one thing, it is terribly complicated (so many 
 So I decided to set up a small website devoted to the Greatest Britons. There have been various polls over the years seeking to identify who really is the _greatest_. And so this seems like a good way to improve my knowledge.
 
 That was 10 years ago. Since then, I've read books on British history, written, watched documentaries and films, written and read a bit more, designed this website, written a bit more, and found some other authors to help me.
-
-I hope you like what you see. Any comments, constructive criticisms, ideas, corrections etc, please drop us a line at
