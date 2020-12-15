@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 const Container = styled.div`
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0rem;
   position: relative;
 
   .skill_title,
@@ -45,12 +45,16 @@ const Container = styled.div`
   }
 
   .skill_quote {
-    max-width: 600px;
+    max-width: 800px;
     color: #00000090;
-    line-height: 26px;
+    font-size: 0.9rem;
     margin-bottom: 4rem;
     position: relative;
     z-index: 1;
+
+    p {
+      line-height: 1.6rem;
+    }
   }
 `
 

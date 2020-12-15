@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 0 0rem 2rem;
 
   @media screen and (min-width: 500px) {
-  padding: 0 2rem 2rem;
+    padding: 0 2rem 2rem;
   }
 
   min-height: 65vh;
@@ -43,6 +43,7 @@ export const Container = styled.div`
         position: relative;
         z-index: 5;
         background: #fff;
+        font-size: 0.9rem;
 
         border-radius: 5px;
         border: 0.3px solid #99999910;
