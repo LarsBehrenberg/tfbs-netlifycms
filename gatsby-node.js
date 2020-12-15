@@ -43,6 +43,17 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
                 }
               }
             }
+            neuigkeiten: allMarkdownRemark(
+              filter: { fileAbsolutePath: { regex: "/neuigkeiten/" } }
+            ) {
+              nodes {
+                id
+                frontmatter {
+                  templateKey
+                  slug
+                }
+              }
+            }
           }
         `,
       ).then(result => {
@@ -53,7 +64,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         // store different pages
         const employees = result.data.employees.nodes
         const skills = result.data.skills.nodes
-        // const neuigkeiten = result.data.neuigkeiten.nodes
+        const neuigkeiten = result.data.neuigkeiten.nodes
 
         // create employee pages
         employees.forEach(({ data }) => {
@@ -80,32 +91,20 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         })
 
         // create neuigkeiten pages
-        // neuigkeiten.forEach(node => {
-        //   const id = node.id
-        //   createPage({
-        //     path: node.fields.slug,
-        //     component: neuigkeitenPageTemplate,
-        //     context: {
-        //       id,
-        //     },
-        //   })
-        // })
+        neuigkeiten.forEach(node => {
+          const id = node.id
+          createPage({
+            path: node.frontmatter.slug,
+            component: neuigkeitenPageTemplate,
+            context: {
+              id,
+            },
+          })
+        })
       }),
     )
   })
 }
-
-// neuigkeiten: (filter: {fileAbsolutePath: {regex: "/neuigkeiten/"}}) {
-//   nodes {
-//     id
-//     fields {
-//       slug
-//     }
-//     frontmatter {
-//       templateKey
-//     }
-//   }
-// }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
