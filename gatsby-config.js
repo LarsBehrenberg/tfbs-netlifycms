@@ -9,19 +9,6 @@ module.exports = {
     author: `@larsbehrenberg`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/favicon.jpg`, // This path is relative to the root of the site.
-    //   },
-    // },
     'gatsby-plugin-sass',
     'gatsby-plugin-emotion',
     {
@@ -54,6 +41,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    // Remark
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -82,12 +70,14 @@ module.exports = {
         ],
       },
     },
+    // Netlify CMS
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    // Prismic data sourcing
     {
       resolve: 'gatsby-source-prismic',
       options: {
@@ -105,6 +95,20 @@ module.exports = {
         ) => {
           // Your HTML serializer
         },
+      },
+    },
+    // SEO
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.jpg`, // This path is relative to the root of the site.
       },
     },
     {
