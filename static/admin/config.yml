@@ -17,7 +17,7 @@ collections:
   - name: 'neuigkeiten'
     label: 'Neuigkeiten'
     folder: 'content/neuigkeiten'
-    create: false
+    create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {
