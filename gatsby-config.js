@@ -9,7 +9,6 @@ module.exports = {
     author: `@larsbehrenberg`,
   },
   plugins: [
-    'gatsby-plugin-sass',
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-plugin-typography`,
@@ -111,13 +110,6 @@ module.exports = {
     //     icon: `src/images/favicon.jpg`, // This path is relative to the root of the site.
     //   },
     // },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
-      },
-    }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

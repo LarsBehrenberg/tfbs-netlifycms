@@ -7,7 +7,7 @@ import Footer from './Footer'
 
 // Styles
 import '../styles/normalize.css'
-import '../styles/index.sass'
+import '../styles/index.css'
 
 const ContentWrapper = styled.div`
   display: block;

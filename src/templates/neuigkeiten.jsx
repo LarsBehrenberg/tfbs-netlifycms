@@ -12,7 +12,6 @@ import ContactComponent from '../components/Common/ContactComponent/ContactCompo
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  console.log(post)
   return (
     <Layout>
       <Header>
