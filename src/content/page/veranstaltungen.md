@@ -15,7 +15,7 @@ veranstaltungen-liste:
       Gründe genug, sich mit ausgewählten Aspekten zum Thema „Führung“ zu
         beschäftigen! Führung findet immer im Kontext von Organisationen statt, daher
         bieten wir an, in dieser Workshop-Reihe besonderes Augenmerk auf die
-        organisationsdynamischen Aspekte von Führung zu legen.
+        organisationsdynamischen Aspekte von Führung zu legen
     link: https://www.igo-muenster.de/leiten-und-beraten-von-gruppen-und-teams-3/
     thumbnail: /uploads/flyer-leiten-und-beraten-2020-22-1.jpg
 ---
