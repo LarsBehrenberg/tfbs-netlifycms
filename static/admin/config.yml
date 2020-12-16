@@ -27,7 +27,12 @@ collections:
           widget: 'hidden',
           default: 'neuigkeiten',
         }
-      - { label: 'Der Titel des Artikels', name: 'title', widget: 'string' }
+      - {
+          label: 'Der Titel des Artikels',
+          name: 'title',
+          widget: 'string',
+          required: true,
+        }
       - {
           label: 'Slug',
           name: 'slug',
@@ -38,26 +43,13 @@ collections:
               '^[A-Za-z0-9][A-Za-z0-9-]*$',
               'Dieser Slug hat nicht das richtige Format. Er darf nur aus Zahlen (0-9), Buchstaben (A-Z) und dem Gedankenstrich (-) bestehen.',
             ],
+          required: true,
         }
       - {
           label: 'Kurze Beschreibung',
           name: 'description',
           widget: 'text',
           hint: 'Diese kurze Beschreibung wird hinterher auf der Startseite beim Anzeigen der Neuigkeit gezeigt sowohl als auch fuer SEO Zwecke benutzt. (max. 150 Zeichen)',
+          required: true,
         }
-      - { label: 'Text', name: 'body', widget: 'markdown' }
-  # - name: "pages"
-  #   label: "Pages"
-  #   files:
-  #     - file: "content/ueber-uns/index.md"
-  #       label: "About"
-  #       name: "about"
-  #       fields:
-  #         - {
-  #             label: "Template Key",
-  #             name: "templateKey",
-  #             widget: "hidden",
-  #             default: "about-page",
-  #           }
-  #         - { label: "Title", name: "title", widget: "string" }
-  #         - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Text', name: 'body', widget: 'markdown', required: true }
