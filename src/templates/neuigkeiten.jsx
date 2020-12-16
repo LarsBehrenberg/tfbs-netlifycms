@@ -10,12 +10,6 @@ import {
 
 import ContactComponent from '../components/Common/ContactComponent/ContactComponent'
 
-NeuigkeitenTemplate.propTypes = {
-  preview: PropTypes.bool,
-  title: PropTypes.string,
-  text: PropTypes.node.isRequired,
-}
-
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
   console.log(post)
