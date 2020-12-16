@@ -49,3 +49,31 @@ h4.component-subtitle {
 h4.skill-title {
   font-size: 0.9rem;
 }
+
+/* Timeline overwrite styles */
+.vertical-timeline-element-icon {
+  /* width: 20px !important;
+  height: 20px !important; */
+}
+
+.vertical-timeline::before {
+  background: linear-gradient(
+    200.91deg,
+    rgba(255, 183, 94, 0.72) 7.57%,
+    rgba(255, 153, 52, 0.9) 94.39%
+  ) !important;
+}
+
+/* Icon container's border */
+.vertical-timeline
+  .vertical-timeline-element--work
+  .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px rgba(255, 153, 52, 0.9) !important;
+}
+
+.vertical-timeline.vertical-timeline-custom-line
+  .vertical-timeline-element--education
+  .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #c2185b, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}

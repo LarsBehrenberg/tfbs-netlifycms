@@ -54,7 +54,7 @@ collections:
   - name: 'pages'
     label: 'Veranstaltungen und mehr'
     files:
-      - file: 'src/content/page/veranstaltungen.md'
+      - file: 'content/page/veranstaltungen.md'
         label: 'Liste der Veranstaltungen'
         name: 'veranstaltungen'
         fields:
