@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Button } from 'components'
+import Button from '../Button/Button'
 
 const Container = styled.div`
   width: 100%;

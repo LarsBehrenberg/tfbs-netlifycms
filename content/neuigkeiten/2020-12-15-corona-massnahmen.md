@@ -1,6 +1,6 @@
 ---
 templateKey: neuigkeiten
-title: Corona Massnahmen
+title: Unsere Corona Massnahmen | Dezember 2020
 slug: corona
 description: >-
   I have always been fascinated by British history.

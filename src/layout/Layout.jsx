@@ -2,7 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { ThemeProvider } from '@emotion/react'
 import theme from './theme'
-import { Header, Footer } from 'layout'
+import Header from './Header'
+import Footer from './Footer'
 
 // Styles
 import '../styles/normalize.css'

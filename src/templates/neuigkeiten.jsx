@@ -1,64 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Layout } from 'layout'
+import { graphql } from 'gatsby'
+import Layout from '../layout/Layout'
+import {
+  Header,
+  BackButton,
+  Content,
+} from '../components/NeuigkeitenPage/components'
 
-// export const BlogPostTemplate = ({
-//   content,
-//   contentComponent,
-//   description,
-//   tags,
-//   title,
-//   helmet,
-// }) => {
-//   const PostContent = contentComponent
+import ContactComponent from '../components/Common/ContactComponent/ContactComponent'
 
-//   return (
-//     <section className="section">
-//       {helmet || ''}
-//       <div className="container content">
-//         <div className="columns">
-//           <div className="column is-10 is-offset-1">
-//             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-//               {title}
-//             </h1>
-//             <p>{description}</p>
-//             <PostContent content={content} />
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// BlogPostTemplate.propTypes = {
-//   content: PropTypes.node.isRequired,
-//   contentComponent: PropTypes.func,
-//   description: PropTypes.string,
-//   title: PropTypes.string,
-//   helmet: PropTypes.object,
-// }
+NeuigkeitenTemplate.propTypes = {
+  preview: PropTypes.bool,
+  title: PropTypes.string,
+  text: PropTypes.node.isRequired,
+}
 
 const BlogPost = ({ data }) => {
-  // const { markdownRemark: post } = data;
-
+  const { markdownRemark: post } = data
+  console.log(post)
   return (
     <Layout>
-      {/* <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      /> */}
+      <Header>
+        <div className="wrapper">
+          <BackButton to="/">&#8592;</BackButton>
+          <h1>{post.frontmatter.title}</h1>
+        </div>
+      </Header>
+      <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+      <ContactComponent />
     </Layout>
   )
 }
@@ -71,16 +41,15 @@ BlogPost.propTypes = {
 
 export default BlogPost
 
-// export const pageQuery = graphql`
-//   query BlogPostByID($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       id
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         title
-//         description
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query BlogPostByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        title
+        description
+      }
+    }
+  }
+`

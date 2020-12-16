@@ -1,13 +1,14 @@
 backend:
+  name: test-repo
   locale: 'de'
-  name: git-gateway
-  branch: master
-  commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+  # name: git-gateway
+  # branch: master
+  # commit_messages:
+  #   create: 'Create {{collection}} “{{slug}}”'
+  #   update: 'Update {{collection}} “{{slug}}”'
+  #   delete: 'Delete {{collection}} “{{slug}}”'
+  #   uploadMedia: '[skip ci] Upload “{{path}}”'
+  #   deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: static/uploads
 public_folder: /uploads
@@ -25,10 +26,25 @@ collections:
           widget: 'hidden',
           default: 'neuigkeiten',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'slug', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Der Titel des Artikels', name: 'title', widget: 'string' }
+      - {
+          label: 'Slug',
+          name: 'slug',
+          widget: 'string',
+          hint: 'Der Slug fuer diesen Artikel. (z.B.: 2020-12-16-jahresprogramm-2020)',
+          pattern:
+            [
+              '^[A-Za-z0-9][A-Za-z0-9-]*$',
+              'Dieser Slug hat nicht das richtige Format. Er darf nur aus Zahlen (0-9), Buchstaben (A-Z) und dem Gedankenstrich (-) bestehen.',
+            ],
+        }
+      - {
+          label: 'Kurze Beschreibung',
+          name: 'description',
+          widget: 'text',
+          hint: 'Diese kurze Beschreibung wird hinterher auf der Startseite beim Anzeigen der Neuigkeit gezeigt sowohl als auch fuer SEO Zwecke benutzt. (max. 150 Zeichen)',
+        }
+      - { label: 'Text', name: 'body', widget: 'markdown' }
   # - name: "pages"
   #   label: "Pages"
   #   files:
