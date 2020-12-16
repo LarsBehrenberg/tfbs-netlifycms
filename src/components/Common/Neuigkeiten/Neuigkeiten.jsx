@@ -49,10 +49,10 @@ const Neuigkeiten = () => {
             return (
               <Child key={node.id} to={`/${node.frontmatter.slug}`}>
                 <h3>{node.frontmatter.title}</h3>
-                <div
-                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                  className="grey"
-                ></div>
+                <p className="grey">{`${node.frontmatter.description.substring(
+                  0,
+                  170,
+                )}...`}</p>
                 <span>Mehr hier &gt;</span>
               </Child>
             )
@@ -75,8 +75,8 @@ const query = graphql`
         frontmatter {
           title
           slug
+          description
         }
-        excerpt(format: HTML, pruneLength: 150)
       }
     }
   }

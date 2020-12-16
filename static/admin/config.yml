@@ -49,7 +49,7 @@ collections:
           label: 'Kurze Beschreibung',
           name: 'description',
           widget: 'text',
-          hint: 'Diese kurze Beschreibung wird hinterher auf der Startseite beim Anzeigen der Neuigkeit gezeigt sowohl als auch fuer SEO Zwecke benutzt. (max. 150 Zeichen)',
+          hint: 'Diese kurze Beschreibung wird hinterher auf der Startseite beim Anzeigen der Neuigkeit gezeigt sowohl als auch fuer SEO Zwecke benutzt. (max. 170 Zeichen)',
           required: true,
         }
       - { label: 'Text', name: 'body', widget: 'markdown', required: true }
