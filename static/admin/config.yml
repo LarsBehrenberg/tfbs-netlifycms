@@ -19,7 +19,6 @@ collections:
     label: 'Neuigkeiten'
     folder: 'content/neuigkeiten'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - {
           label: 'Template Key',
@@ -53,3 +52,52 @@ collections:
           required: true,
         }
       - { label: 'Text', name: 'body', widget: 'markdown', required: true }
+  - name: 'veranstaltungen'
+    label: 'igo-Veranstaltungen'
+    folder: 'content/veranstaltungen'
+    create: true
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'veranstaltungen',
+        }
+      - {
+          label: 'Der Titel der Veranstaltung',
+          name: 'title',
+          widget: 'string',
+          default: 'Leiten und Beraten von Gruppen und Teams',
+          required: true,
+        }
+      - {
+          label: 'Link zur Veranstaltungseite auf igo',
+          name: 'link',
+          widget: 'string',
+          hint: 'Der Link fuer diese Veranstaltung. (z.B.: https://www.igo-muenster.de/haette-ich-das-gewusst/)',
+          required: true,
+        }
+      - {
+          label: 'Datum und Zeit der Veranstaltung',
+          name: 'date',
+          widget: 'datetime',
+          default: '',
+          date_format: 'DD.MM.YYYY', # e.g. 24.12.2021
+          time_format: 'HH:mm', # e.g. 21:07
+          format: 'LLL',
+          picker_utc: false,
+        }
+      - {
+          label: 'Kurze Beschreibung',
+          name: 'description',
+          default: 'Wenn Sie mit Gruppen oder Teams oder in einer Leitungsfunktion arbeiten, ganz gleich im Unternehmen, in der Schule oder in der Verwaltung, haben Sie in vielerlei Bezügen mit deren Dynamik zu tun.',
+          widget: 'text',
+          hint: 'Diese kurze Beschreibung dient wird beim Anzeigen der Veranstaltungen genutzt. (max. 170 Zeichen)',
+          required: true,
+        }
+      - {
+          label: 'Prospekt Foto',
+          name: 'thumbnail',
+          widget: 'image',
+          hint: 'Lade hier das Prospektfoto der Veranstaltung hoch.',
+        }
