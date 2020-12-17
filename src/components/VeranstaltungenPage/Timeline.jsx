@@ -61,56 +61,77 @@ const EventContainer = styled.a`
   }
 `
 
+const Content = styled.div`
+  margin: 3rem auto 2rem;
+  text-align: center;
+
+  .component-title {
+    color: ${props => props.theme.colors.primary};
+  }
+`
+
 const Timeline = () => {
   const data = useStaticQuery(query)
   const veranstaltungen = data.markdownRemark.frontmatter.veranstaltungen_liste
 
   return (
-    <VerticalTimeline>
-      {veranstaltungen.map((event, index) => {
-        const { title, date, link, description, thumbnail } = event
-        return (
-          <VerticalTimelineElement
-            key={title}
-            className="vertical-timeline-element"
-            contentStyle={{
-              borderRadius: '0.5rem',
-            }}
-            contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-            date={date}
-            iconStyle={{ background: 'orange', color: '#fff' }}
-            icon={<MdEventAvailable />}
-          >
-            <EventContainer href={link} target="_blank" rel="noopener referrer">
-              <div className="timeline-image-wrapper">
-                <Img
-                  style={{
-                    maxHeight: '250px',
-                    height: '100%',
-                    width: '100%',
-                    objectFit: 'contain',
-                  }}
-                  imgStyle={{
-                    maxHeight: '250px',
-                    height: '100%',
-                    width: '100%',
-                    objectFit: 'contain',
-                  }}
-                  objectFit="contain"
-                  fluid={thumbnail.childImageSharp.fluid}
-                  alt={title}
-                />
-              </div>
-              <div className="timeline-text-wrapper">
-                <h3 className="vertical-timeline-element-title">{title}</h3>
-                <p className="timeline-event-description">{description}</p>
-                <p className="read-more">Mehr hier &gt;</p>
-              </div>
-            </EventContainer>
-          </VerticalTimelineElement>
-        )
-      })}
-    </VerticalTimeline>
+    <>
+      <Content>
+        <h4 className="component-subtitle">Unsere Veranstaltungen</h4>
+        <h2 className="component-title">
+          Lesen mir hier mehr über die nächsten Veranstaltungen
+        </h2>
+      </Content>
+      <VerticalTimeline>
+        {veranstaltungen.map((event, index) => {
+          const { title, date, link, description, thumbnail } = event
+          return (
+            <VerticalTimelineElement
+              key={title}
+              className="vertical-timeline-element"
+              contentStyle={{
+                borderRadius: '0.5rem',
+              }}
+              contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+              date={date}
+              iconStyle={{ background: 'orange', color: '#fff' }}
+              icon={<MdEventAvailable />}
+            >
+              <EventContainer
+                href={link}
+                target="_blank"
+                rel="noopener referrer"
+              >
+                <div className="timeline-image-wrapper">
+                  <Img
+                    style={{
+                      maxHeight: '250px',
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
+                    imgStyle={{
+                      maxHeight: '250px',
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
+                    objectFit="contain"
+                    fluid={thumbnail.childImageSharp.fluid}
+                    alt={title}
+                  />
+                </div>
+                <div className="timeline-text-wrapper">
+                  <h3 className="vertical-timeline-element-title">{title}</h3>
+                  <p className="timeline-event-description">{description}</p>
+                  <p className="read-more">Mehr hier &gt;</p>
+                </div>
+              </EventContainer>
+            </VerticalTimelineElement>
+          )
+        })}
+      </VerticalTimeline>
+    </>
   )
 }
 
