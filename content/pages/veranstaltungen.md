@@ -9,6 +9,7 @@ veranstaltungen-liste:
         vielerlei Bezügen mit deren Dynamik zu tun.
     link: https://www.igo-muenster.de/leiten-und-beraten-von-gruppen-und-teams-3/
     thumbnail: /uploads/igo_flyer_haette_ich_das_gewusst.png
+    date: Workshops Januar-Mai 2021
   - featured: true
     title: Leiten und Beraten von Gruppen und Teams
     description: >-
@@ -18,4 +19,5 @@ veranstaltungen-liste:
         organisationsdynamischen Aspekte von Führung zu legen.
     link: https://www.igo-muenster.de/leiten-und-beraten-von-gruppen-und-teams-3/
     thumbnail: /uploads/flyer-leiten-und-beraten-2020-22-1.jpg
+    date: 2020–2022
 ---
