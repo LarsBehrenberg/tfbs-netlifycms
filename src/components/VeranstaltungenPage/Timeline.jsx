@@ -68,7 +68,7 @@ const Timeline = () => {
   return (
     <VerticalTimeline>
       {veranstaltungen.map((event, index) => {
-        const { title, link, description, thumbnail } = event
+        const { title, date, link, description, thumbnail } = event
         return (
           <VerticalTimelineElement
             className="vertical-timeline-element"
@@ -76,7 +76,7 @@ const Timeline = () => {
               borderRadius: '0.5rem',
             }}
             contentArrowStyle={{ borderRight: '7px solid  #fff' }}
-            date="2011 - present"
+            date={date}
             iconStyle={{ background: 'orange', color: '#fff' }}
             icon={<MdEventAvailable />}
           >
@@ -124,6 +124,7 @@ const query = graphql`
         veranstaltungen_liste {
           title
           link
+          date
           description
           thumbnail {
             childImageSharp {
