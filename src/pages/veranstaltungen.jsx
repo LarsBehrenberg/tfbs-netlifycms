@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Layout } from 'layout'
-import { Neuigkeiten } from 'components'
+import { Neuigkeiten, Timeline } from 'components'
 import { Header, BackButton } from '../components/NeuigkeitenPage/components'
 
 const VeranstaltungenPage = () => (
@@ -15,6 +15,7 @@ const VeranstaltungenPage = () => (
       </div>
     </Header>
     <Neuigkeiten />
+    <Timeline />
   </Layout>
 )
 

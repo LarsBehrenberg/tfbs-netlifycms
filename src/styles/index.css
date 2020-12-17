@@ -14,6 +14,10 @@ html {
   z-index: 0;
 }
 
+h3 {
+  font-size: 1.2rem;
+}
+
 /* font sizing and styling */
 p,
 .normal-text,
@@ -48,4 +52,18 @@ h4.component-subtitle {
 
 h4.skill-title {
   font-size: 0.9rem;
+}
+
+/* Timeline overwrite styles */
+.vertical-timeline::before {
+  background: linear-gradient(
+    200.91deg,
+    rgba(255, 183, 94, 0.72) 7.57%,
+    rgba(255, 153, 52, 0.9) 94.39%
+  ) !important;
+}
+
+.vertical-timeline-element-content {
+  padding: 0 !important;
+  box-shadow: none !important;
 }

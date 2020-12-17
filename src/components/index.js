@@ -28,3 +28,6 @@ export { default as ContactForm } from './ContactPage/Main'
 export { default as Map } from './ContactPage/Map'
 export { ContactBackground } from './ContactPage/components'
 export { KontaktContainer } from './ContactPage/components'
+
+// Veranstaltungen page
+export { default as Timeline } from './VeranstaltungenPage/Timeline'
