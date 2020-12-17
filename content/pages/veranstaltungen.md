@@ -1,7 +1,7 @@
 ---
 veranstaltungen-liste:
   - featured: true
-    title: „Hätte ich das gewusst …!“ | Januar-Mai 2021
+    title: „Hätte ich das gewusst …!“
     description: >-
       Wenn Sie mit Gruppen oder Teams oder in einer Leitungsfunktion arbeiten,
       ganz
@@ -10,7 +10,7 @@ veranstaltungen-liste:
     link: https://www.igo-muenster.de/leiten-und-beraten-von-gruppen-und-teams-3/
     thumbnail: /uploads/igo_flyer_haette_ich_das_gewusst.png
   - featured: true
-    title: Leiten und Beraten von Gruppen und Teams | 2020–2022
+    title: Leiten und Beraten von Gruppen und Teams
     description: >-
       Gründe genug, sich mit ausgewählten Aspekten zum Thema „Führung“ zu
         beschäftigen! Führung findet immer im Kontext von Organisationen statt, daher

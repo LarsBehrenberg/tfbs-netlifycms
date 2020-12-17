@@ -14,6 +14,10 @@ html {
   z-index: 0;
 }
 
+h3 {
+  font-size: 1.2rem;
+}
+
 /* font sizing and styling */
 p,
 .normal-text,
@@ -51,11 +55,6 @@ h4.skill-title {
 }
 
 /* Timeline overwrite styles */
-.vertical-timeline-element-icon {
-  /* width: 20px !important;
-  height: 20px !important; */
-}
-
 .vertical-timeline::before {
   background: linear-gradient(
     200.91deg,
@@ -64,16 +63,7 @@ h4.skill-title {
   ) !important;
 }
 
-/* Icon container's border */
-.vertical-timeline
-  .vertical-timeline-element--work
-  .vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px rgba(255, 153, 52, 0.9) !important;
-}
-
-.vertical-timeline.vertical-timeline-custom-line
-  .vertical-timeline-element--education
-  .vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px #c2185b, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
+.vertical-timeline-element-content {
+  padding: 0 !important;
+  box-shadow: none !important;
 }

@@ -44,7 +44,7 @@ const VeranstaltungenPreview = ({ entry, getAsset, widgetsFor }) => {
                       <div className="text">
                         {`${node
                           .getIn(['data', 'description'])
-                          .substring(0, 170)}...`}
+                          .substring(0, 100)}...`}
                       </div>
                     ) : (
                       <span></span>
