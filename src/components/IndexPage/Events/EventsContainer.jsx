@@ -1,18 +1,141 @@
 import React from 'react'
-import { Container, Content, EventWrapper } from './components'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import Slider from 'react-slick'
+
+// Components
+import { Container, Content, SliderWrapper, Child } from './components'
+
+// Slider settings
+const sliderSettings = {
+  dots: true,
+  speed: 1500,
+  autoplay: true,
+  autoplaySpeed: 2800,
+  pauseOnHover: true,
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  nextArrow: false,
+  prevArrow: false,
+  responsive: [
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+      },
+    },
+  ],
+}
 
 const EventsContainer = () => {
+  const data = useStaticQuery(query)
+  const veranstaltungen = data.markdownRemark.frontmatter.veranstaltungen_liste
   return (
     <Container>
       <Content>
-        <h4 className="subtitle">Unsere Veranstaltungen</h4>
-        <h2 className="title">Erfahren Sie Mehr Über Unsere Veranstaltungen</h2>
+        <h4 className="component-subtitle">Unsere Veranstaltungen</h4>
+        <h2 className="component-title">
+          Erfahren Sie Mehr Über Unsere Veranstaltungen
+        </h2>
       </Content>
-      <EventWrapper>
-        <span>hier sind demnächst die veranstaltungen</span>
-      </EventWrapper>
+      <SliderWrapper>
+        <Slider {...sliderSettings}>
+          {veranstaltungen.map((event, index) => {
+            const { title, date, link, description, thumbnail } = event
+            return (
+              <Child>
+                <div className="timeline-image-wrapper">
+                  <Img
+                    style={{
+                      maxHeight: '250px',
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
+                    imgStyle={{
+                      maxHeight: '250px',
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
+                    objectFit="contain"
+                    fluid={thumbnail.childImageSharp.fluid}
+                    alt={title}
+                  />
+                </div>
+                <div className="event-text-wrapper">
+                  <h3 className="event-title">{title}</h3>
+                  <p className="event-description">{description}</p>
+                  <p className="read-more">Mehr hier &gt;</p>
+                </div>
+              </Child>
+            )
+          })}
+          {veranstaltungen.map((event, index) => {
+            const { title, date, link, description, thumbnail } = event
+            return (
+              <Child href={link} target="_blank" rel="noopener referrer">
+                <div className="timeline-image-wrapper">
+                  <Img
+                    style={{
+                      maxHeight: '250px',
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
+                    imgStyle={{
+                      maxHeight: '250px',
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
+                    }}
+                    objectFit="contain"
+                    fluid={thumbnail.childImageSharp.fluid}
+                    alt={title}
+                  />
+                </div>
+                <div className="event-text-wrapper">
+                  <h3 className="event-title">{title}</h3>
+                  <p className="event-description">{description}</p>
+                  <p className="read-more">Mehr hier &gt;</p>
+                </div>
+              </Child>
+            )
+          })}
+        </Slider>
+      </SliderWrapper>
     </Container>
   )
 }
 
 export default EventsContainer
+
+const query = graphql`
+  query {
+    markdownRemark(
+      fileAbsolutePath: { regex: "/content/pages/veranstaltungen.md/" }
+      frontmatter: {
+        veranstaltungen_liste: { elemMatch: { featured: { eq: true } } }
+      }
+    ) {
+      frontmatter {
+        veranstaltungen_liste {
+          title
+          link
+          date
+          description
+          thumbnail {
+            childImageSharp {
+              fluid(maxWidth: 250, traceSVG: { color: "#2B2B2F" }) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
