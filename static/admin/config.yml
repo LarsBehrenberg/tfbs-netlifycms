@@ -54,7 +54,7 @@ collections:
   - name: 'pages'
     label: 'Veranstaltungen und mehr'
     files:
-      - file: 'content/page/veranstaltungen.md'
+      - file: 'content/pages/veranstaltungen.md'
         label: 'Liste der Veranstaltungen'
         name: 'veranstaltungen'
         fields:
@@ -82,7 +82,7 @@ collections:
                   label: 'Das Datum der Veranstaltung',
                   name: 'date',
                   widget: 'string',
-                  default: '21.-25. Oktober 2021',
+                  default: 'Januar 2021',
                   required: true,
                   hint: 'Dieses Datum wird mit an der Zeitlinie neben der Veranstaltung angezeigt. Die Reihenfolge der Veranstaltung wird hier im CMS sortiert und nicht durch das Datum entschieden.',
                 }

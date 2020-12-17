@@ -17,42 +17,48 @@ const VeranstaltungenPreview = ({ entry, getAsset, widgetsFor }) => {
             return (
               <>
                 <div className="vertical-line" />
-                <a
-                  className="container"
-                  href={node.getIn(['data', 'link'])}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="image-wrapper">
-                    <div
-                      className="image"
-                      style={{
-                        backgroundImage: `url(${
-                          !!image.childImageSharp
-                            ? image.childImageSharp.fluid.src
-                            : image
-                        })`,
-                      }}
-                    />
-                  </div>
-
-                  <div className="text-content">
-                    <h3 className="title">
-                      {node ? node.getIn(['data', 'title']) : ''}
-                    </h3>
-                    {node ? (
-                      <div className="text">
-                        {`${node
-                          .getIn(['data', 'description'])
-                          .substring(0, 100)}...`}
+                <div className="container">
+                  <a
+                    href={node.getIn(['data', 'link'])}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex-container">
+                      <div className="image-wrapper">
+                        <div
+                          className="image"
+                          style={{
+                            backgroundImage: `url(${
+                              !!image.childImageSharp
+                                ? image.childImageSharp.fluid.src
+                                : image
+                            })`,
+                          }}
+                        />
                       </div>
-                    ) : (
-                      <span></span>
-                    )}
 
-                    <span className="read-more">Read more</span>
-                  </div>
-                </a>
+                      <div className="text-content">
+                        <h3 className="title">
+                          {node ? node.getIn(['data', 'title']) : ''}
+                        </h3>
+                        {node ? (
+                          <div className="text">
+                            {`${node
+                              .getIn(['data', 'description'])
+                              .substring(0, 100)}...`}
+                          </div>
+                        ) : (
+                          <span></span>
+                        )}
+
+                        <span className="read-more">Read more</span>
+                      </div>
+                    </div>
+                  </a>
+                  <p className="date">
+                    {node ? node.getIn(['data', 'date']) : ''}
+                  </p>
+                </div>
               </>
             )
           })}
