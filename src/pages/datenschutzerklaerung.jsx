@@ -1,27 +1,28 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 
 import { Layout } from 'layout'
+import { Breadcrumb } from 'components'
 
-const Placeholder = styled.div`
-  height: 50vh;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-`
-
-const DatenschutzerklaerungPage = () => (
+const DatenschutzerklaerungPage = ({ data }) => (
   <Layout>
     {/* <SEO title="404: Not found" /> */}
-    <Placeholder>
+    <Breadcrumb currentPageTitle="Datenschutzerklärung" skillPage={false} />
+    <div style={{ padding: '0 2rem' }}>
       <h1>Datenschutzerklärung</h1>
-      <p>Not quite yet here ...</p>
-    </Placeholder>
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    </div>
   </Layout>
 )
 
 export default DatenschutzerklaerungPage
+
+export const query = graphql`
+  query {
+    markdownRemark(
+      fileAbsolutePath: { regex: "/content/pages/datenschutzerklaerung.md/" }
+    ) {
+      html
+    }
+  }
+`
