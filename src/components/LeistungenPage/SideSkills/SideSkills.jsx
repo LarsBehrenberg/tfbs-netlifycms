@@ -101,7 +101,7 @@ const SideSkills = () => {
             <h4 className="skill-title">Training</h4>
             <div className="button">&#x2192;</div>
           </Link>
-          <Link to="/leistungen/fortbildung" className="side-skill-link">
+          <Link to="/leistungen/fortbildungen" className="side-skill-link">
             <div className="logo">
               <FaGraduationCap size="30px" color="#939393" />
             </div>
