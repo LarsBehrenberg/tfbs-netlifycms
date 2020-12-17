@@ -51,14 +51,18 @@ const Background = styled.div`
   z-index: 1;
 `
 
-const BreadCrumb = ({ currentPageTitle = 'apoCoaching' }) => (
+const BreadCrumb = ({ currentPageTitle = 'apoCoaching', skillPage = true }) => (
   <Container>
     <FlexWrapper>
       <h4 className="breadcrumb_title">{currentPageTitle}</h4>
       <div className="breadcrumbs">
         <Link to="/">Home</Link>
-        <Arrow />
-        <Link to="/leistungen">Leistungen</Link>
+        {skillPage ? (
+          <>
+            <Arrow />
+            <Link to="/leistungen">Leistungen</Link>
+          </>
+        ) : null}
         <Arrow />
         <span>{currentPageTitle}</span>
       </div>

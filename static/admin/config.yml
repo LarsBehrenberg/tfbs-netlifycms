@@ -108,3 +108,19 @@ collections:
                   hint: 'Lade hier das Prospektfoto der Veranstaltung hoch.',
                   required: true,
                 }
+      - label: 'Impressum'
+        name: 'impressum'
+        file: '/content/pages/impressum.md'
+        fields:
+          - label: 'Impressum Text'
+            name: 'body'
+            widget: markdown
+            required: true
+      - label: 'Datenschutzerklärung'
+        name: 'datenschutzerklaerung'
+        file: '/content/pages/datenschutzerklaerung.md'
+        fields:
+          - label: 'Datenschutzerklärung Text'
+            name: 'body'
+            widget: markdown
+            required: true
