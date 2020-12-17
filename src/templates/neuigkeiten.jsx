@@ -16,7 +16,7 @@ const BlogPost = ({ data }) => {
     <Layout>
       <Header>
         <div className="wrapper">
-          <BackButton to="/">&#8592;</BackButton>
+          <BackButton to="/veranstaltungen">&#8592;</BackButton>
           <h1>{post.frontmatter.title}</h1>
         </div>
       </Header>
