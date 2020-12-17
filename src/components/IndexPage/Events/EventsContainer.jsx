@@ -43,7 +43,7 @@ const EventsContainer = () => {
       </Content>
       <SliderWrapper>
         <Slider {...sliderSettings}>
-          {veranstaltungen.map((event, index) => {
+          {veranstaltungen.map(event => {
             const { title, link, description, thumbnail } = event
             return (
               <Child
