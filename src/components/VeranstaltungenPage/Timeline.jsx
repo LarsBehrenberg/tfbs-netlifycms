@@ -71,6 +71,7 @@ const Timeline = () => {
         const { title, date, link, description, thumbnail } = event
         return (
           <VerticalTimelineElement
+            key={title}
             className="vertical-timeline-element"
             contentStyle={{
               borderRadius: '0.5rem',

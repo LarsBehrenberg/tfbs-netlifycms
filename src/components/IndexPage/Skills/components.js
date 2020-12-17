@@ -5,7 +5,10 @@ import { Link } from 'gatsby'
 export const sliderSettings = {
   dots: false,
   infinite: true,
-  speed: 200,
+  speed: 1500,
+  autoplay: true,
+  autoplaySpeed: 2800,
+  pauseOnHover: true,
   slidesToShow: 3,
   slidesToScroll: 3,
   initialSlide: 0,

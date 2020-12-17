@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
 
 export const Container = styled.section`
   width: 100%;
@@ -43,7 +42,7 @@ export const SliderWrapper = styled.div`
   }
 `
 
-export const Child = styled(Link)`
+export const Child = styled.a`
   max-width: 90%;
   padding: 0 2rem;
   min-height: 350px;

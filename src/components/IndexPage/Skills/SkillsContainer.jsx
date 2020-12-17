@@ -54,14 +54,14 @@ export default class SkillsContainer extends React.Component {
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet ac sit pellentesque. Nunc duis integer tristique in quis volutpat urna, senectus ut. Lectus eu faucibus erat arcu. ',
                 }}
               />
-              <div style={{ float: 'right' }}>
+              {/* <div style={{ float: 'right' }}>
                 <button className="previous" onClick={this.previous}>
                   &#x2190;
                 </button>
                 <button className="next" onClick={this.next}>
                   &#x2192;
                 </button>
-              </div>
+              </div> */}
             </div>
           </Content>
 

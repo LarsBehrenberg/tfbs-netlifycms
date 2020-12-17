@@ -44,40 +44,14 @@ const EventsContainer = () => {
       <SliderWrapper>
         <Slider {...sliderSettings}>
           {veranstaltungen.map((event, index) => {
-            const { title, date, link, description, thumbnail } = event
+            const { title, link, description, thumbnail } = event
             return (
-              <Child>
-                <div className="timeline-image-wrapper">
-                  <Img
-                    style={{
-                      maxHeight: '250px',
-                      height: '100%',
-                      width: '100%',
-                      objectFit: 'contain',
-                    }}
-                    imgStyle={{
-                      maxHeight: '250px',
-                      height: '100%',
-                      width: '100%',
-                      objectFit: 'contain',
-                    }}
-                    objectFit="contain"
-                    fluid={thumbnail.childImageSharp.fluid}
-                    alt={title}
-                  />
-                </div>
-                <div className="event-text-wrapper">
-                  <h3 className="event-title">{title}</h3>
-                  <p className="event-description">{description}</p>
-                  <p className="read-more">Mehr hier &gt;</p>
-                </div>
-              </Child>
-            )
-          })}
-          {veranstaltungen.map((event, index) => {
-            const { title, date, link, description, thumbnail } = event
-            return (
-              <Child href={link} target="_blank" rel="noopener referrer">
+              <Child
+                key={title}
+                href={link}
+                target="_blank"
+                rel="noopener referrer"
+              >
                 <div className="timeline-image-wrapper">
                   <Img
                     style={{
@@ -125,7 +99,6 @@ const query = graphql`
         veranstaltungen_liste {
           title
           link
-          date
           description
           thumbnail {
             childImageSharp {
