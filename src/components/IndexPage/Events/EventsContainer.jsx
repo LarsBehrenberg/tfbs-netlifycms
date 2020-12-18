@@ -4,7 +4,14 @@ import Img from 'gatsby-image'
 import Slider from 'react-slick'
 
 // Components
-import { Container, Content, SliderWrapper, Child } from './components'
+import {
+  Container,
+  Content,
+  SliderWrapper,
+  Child,
+  ButtonWrapper,
+} from './components'
+import { Button } from 'components'
 
 // Slider settings
 const sliderSettings = {
@@ -81,6 +88,9 @@ const EventsContainer = () => {
           })}
         </Slider>
       </SliderWrapper>
+      <ButtonWrapper>
+        <Button to="/veranstaltungen">Alle Veranstaltungen</Button>
+      </ButtonWrapper>
     </Container>
   )
 }

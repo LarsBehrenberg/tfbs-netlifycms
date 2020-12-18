@@ -119,3 +119,9 @@ export const Child = styled.a`
     color: black;
   }
 `
+
+export const ButtonWrapper = styled.div`
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: center;
+`
