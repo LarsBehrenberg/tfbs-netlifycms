@@ -42,9 +42,9 @@ const BackgroundImage = styled.div`
         max-width: 80vw;
       }
 
-      @media screen and (max-width: 600px) {
+      /* @media screen and (max-width: 600px) {
         padding-right: 1rem;
-      }
+      } */
 
       &,
       h2,
@@ -70,7 +70,10 @@ const BackgroundImage = styled.div`
   div:not(:first-of-type),
   img {
     max-height: 400px;
-    border-radius: 0 6px 6px 0;
+
+    @media screen and (min-width: 700px) {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
 
     position: absolute !important;
     top: 0;
@@ -82,6 +85,10 @@ const BackgroundImage = styled.div`
       rgba(255, 183, 94, 0.72) 7.57%,
       rgba(255, 153, 52, 0.9) 94.39%
     );
+
+    @media screen and (max-width: 700px) {
+      right: 0;
+    }
   }
 `
 
