@@ -69,7 +69,6 @@ const commonCardCSS = css`
   .name,
   .subtitle {
     text-align: center;
-    max-width: 300px;
     margin: 1rem auto;
   }
 
@@ -85,7 +84,6 @@ const commonCardCSS = css`
   .name {
     line-height: 1.8rem;
     text-align: center;
-    text-transform: uppercase;
 
     color: #ff9934;
   }

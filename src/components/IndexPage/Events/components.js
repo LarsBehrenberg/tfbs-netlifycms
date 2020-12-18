@@ -122,6 +122,10 @@ export const Child = styled.a`
 
 export const ButtonWrapper = styled.div`
   margin: 1rem auto 0;
+
+  @media screen and (max-width: 700px) {
+    margin-top: 2rem;
+  }
   display: flex;
   justify-content: center;
 `
