@@ -77,10 +77,10 @@ const Timeline = () => {
   return (
     <>
       <Content>
-        <h4 className="component-subtitle">Unsere Veranstaltungen</h4>
-        <h2 className="component-title">
-          Lesen mir hier mehr über die nächsten Veranstaltungen
-        </h2>
+        <h4 className="component-subtitle">
+          Trainings, Supervisionen &amp; Mehr
+        </h4>
+        <h2 className="component-title">Unsere nächsten Veranstaltungen</h2>
       </Content>
       <VerticalTimeline>
         {veranstaltungen.map((event, index) => {

@@ -67,7 +67,7 @@ const SkillContainer = styled.div`
       left: 50%;
       transform: translateX(-50%);
 
-      padding-top: 5px;
+      padding-top: 2px;
 
       background: linear-gradient(90deg, #ff9934, #ffb072);
       color: #fff;
