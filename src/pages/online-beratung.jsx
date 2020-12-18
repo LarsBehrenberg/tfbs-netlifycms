@@ -18,6 +18,7 @@ const OnlineBeratungPage = ({ data }) => {
         fluid_image={hero_image.localFile.childImageSharp.fluid}
         title={hero_title.text}
         button_title={hero_button_text.text}
+        weblink={true}
         button_link={hero_button_link.text}
       />
       <ContentTabs tabs={tabs} />

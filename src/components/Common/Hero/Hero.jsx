@@ -224,6 +224,7 @@ const Hero = ({
   subtitle,
   button_title,
   button_link,
+  weblink = false,
 }) => {
   return (
     <Container>
@@ -257,7 +258,9 @@ const Hero = ({
                 {subtitle ? (
                   <h3 className="header-subtitle">{subtitle}</h3>
                 ) : null}
-                <Button to={button_link}>{button_title}</Button>
+                <Button weblink={weblink} to={button_link}>
+                  {button_title}
+                </Button>
               </div>
             </div>
           </div>
@@ -266,7 +269,9 @@ const Hero = ({
             <div className="content">
               <h1>{title}</h1>
               {subtitle ? <h3>{subtitle}</h3> : null}
-              <Button to={button_link}>{button_title}</Button>
+              <Button weblink={weblink} to={button_link}>
+                {button_title}
+              </Button>
             </div>
 
             <div className="overflow-hidden">

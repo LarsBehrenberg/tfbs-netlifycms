@@ -64,7 +64,7 @@ const StyledWebLink = styled.a`
 `
 
 const Button = ({ to = '/', weblink = false, children = 'Unser Angebot' }) => {
-  return !weblink ? (
+  return weblink === false ? (
     <StyledLink to={to}>
       <div>
         <svg
