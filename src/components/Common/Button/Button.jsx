@@ -16,7 +16,6 @@ const StyledLink = styled(Link)`
     width: 22px;
     height: 22px;
     padding-left: 8px;
-    padding-top: 0px;
     border-radius: 50%;
     margin: 0 10px 0 0;
     background: ${props => props.theme.colors.primary};
@@ -47,10 +46,10 @@ const StyledWebLink = styled.a`
     width: 22px;
     height: 22px;
     padding-left: 8px;
-    padding-top: 1px;
     border-radius: 50%;
     margin: 0 10px 0 0;
     background: ${props => props.theme.colors.primary};
+    line-height: 1.1em;
   }
 
   span {
