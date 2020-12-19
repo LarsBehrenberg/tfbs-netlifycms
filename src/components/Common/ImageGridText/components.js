@@ -164,6 +164,7 @@ export const Grid = styled.div`
         margin-top: 0.5rem;
         margin-bottom: 0.2rem;
         font-weight: 500;
+        font-size: 0.9rem;
         text-transform: uppercase;
       }
     }
