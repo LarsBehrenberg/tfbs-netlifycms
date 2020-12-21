@@ -19,7 +19,10 @@ const StyledLink = styled(Link)`
     border-radius: 50%;
     margin: 0 10px 0 0;
     background: ${props => props.theme.colors.primary};
-    line-height: 1.1em;
+
+    @media screen and (min-width: 480px) {
+      line-height: 1.1em;
+    }
   }
 
   span {
@@ -49,7 +52,10 @@ const StyledWebLink = styled.a`
     border-radius: 50%;
     margin: 0 10px 0 0;
     background: ${props => props.theme.colors.primary};
-    line-height: 1.1em;
+
+    @media screen and (min-width: 480px) {
+      line-height: 1.1em;
+    }
   }
 
   span {

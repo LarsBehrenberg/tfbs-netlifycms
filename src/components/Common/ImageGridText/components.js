@@ -28,7 +28,7 @@ export const Content = styled.div`
 
   @media screen and (max-width: 750px) {
     padding: 0 2rem 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
   }
 
   .content {
@@ -116,7 +116,7 @@ export const Grid = styled.div`
 
   &.three_box_grid {
     @media screen and (max-width: 750px) {
-      margin-bottom: -3rem;
+      margin-bottom: -2rem;
     }
     .image-1 {
       grid-column: 2 / 10;
