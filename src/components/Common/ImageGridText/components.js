@@ -37,7 +37,8 @@ export const Content = styled.div`
     }
 
     .title {
-      font-weight: bold;
+      font-weight: 400;
+      line-height: 1.2em;
       margin-top: 0;
       &.black {
         color: #000000;
@@ -48,7 +49,7 @@ export const Content = styled.div`
     }
 
     @media (min-width: 750px) {
-      max-width: 370px;
+      max-width: 400px;
     }
 
     h2,
@@ -138,6 +139,9 @@ export const Grid = styled.div`
   }
 
   &.four_box_grid {
+    @media (min-width: 750px) {
+      margin-top: -0.2rem;
+    }
     .text-container {
       grid-column: 1 / 11;
       grid-row: 1 / 14;
