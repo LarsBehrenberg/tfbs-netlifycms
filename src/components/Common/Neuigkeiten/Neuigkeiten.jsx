@@ -5,9 +5,6 @@ import Slider from 'react-slick'
 // Components
 import { Container, Content, SliderWrapper, Child } from './components'
 
-// Styles
-// import '../../../styles/slick-carousel.css'
-
 const sliderSettings = {
   dots: true,
   speed: 1500,
@@ -38,7 +35,7 @@ const Neuigkeiten = () => {
   return (
     <Container>
       <Content>
-        <h4 className="component-subtitle">Neuigkeiten</h4>
+        <h4 className="component-subtitle">Unsere Neuigkeiten</h4>
         <h2 className="component-title">
           Erfahren Sie hier das Neueste von t.f.b.s - Telgte
         </h2>

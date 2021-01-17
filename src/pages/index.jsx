@@ -9,6 +9,7 @@ import {
   ImageGridText,
   ContactComponent,
   Neuigkeiten,
+  Netzwerke
 } from 'components'
 
 const IndexPage = ({ data }) => {
@@ -42,7 +43,7 @@ const IndexPage = ({ data }) => {
       <ImageGridText />
       <SkillsContainer />
       <EventsContainer />
-      {/* <ThreeBoxGrid /> */}
+      <Netzwerke />
       <ImageGridText
         four_box_grid={false}
         title_class="primary"

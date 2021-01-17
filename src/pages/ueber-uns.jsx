@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import { Layout } from 'layout'
-import { ImageGridText, EmployeeList } from 'components'
+import { ImageGridText, EmployeeList, ContactComponent } from 'components'
 
 const UeberUnsPage = ({ data }) => {
   const { employees } = data.prismicUberUns.data
@@ -11,6 +11,7 @@ const UeberUnsPage = ({ data }) => {
       {/* <SEO title="404: Not found" /> */}
       <EmployeeList employees={employees} />
       <ImageGridText />
+      <ContactComponent />
     </Layout>
   )
 }
