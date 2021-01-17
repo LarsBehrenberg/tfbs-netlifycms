@@ -9,6 +9,7 @@ module.exports = {
     author: `@larsbehrenberg`,
   },
   plugins: [
+    'gatsby-plugin-sass',
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-plugin-typography`,
