@@ -15,7 +15,7 @@ const theme = {
     white: '#ffffff',
   },
   fontSize: {
-    nav: '0.75rem', // 12px
+    nav: '0.9rem', // 12px
     text: '1rem', // 16px
     button: '1.125rem', // 18px
     title: '1.125rem    ', // 18px

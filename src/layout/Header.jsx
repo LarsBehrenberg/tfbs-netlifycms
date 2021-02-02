@@ -65,12 +65,15 @@ const Wrapper = styled.div`
   justify-content: space-between;
 
   a {
-    color: black;
-    text-decoration: none;
-    text-shadow: none;
-    background: none;
+    color: ${({ theme }) => theme.colors.black};
+    font-size: ${({ theme }) => theme.fontSize.nav};
+    text-transform: capitalize;
 
     &:hover {
+      color: ${({ theme }) => theme.colors.primaryDark};
+    }
+
+    &.currentActiveLink {
       color: ${({ theme }) => theme.colors.primaryDark};
     }
   }
@@ -80,7 +83,7 @@ const Wrapper = styled.div`
     position: relative;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: ${({ theme }) => theme.media.lg}) {
     .desktop-menu {
       display: none;
     }
@@ -108,22 +111,13 @@ const Menu = styled.div`
   a {
     margin-left: 1.5rem;
   }
-
-  a.currentActiveLink {
-    color: ${({ theme }) => theme.colors.primaryDark};
-  }
 `
 
 const StyledMobileMenu = styled(MobileMenu)`
-  @media (min-width: 1000px) {
+  @media (min-width: ${({ theme }) => theme.media.lg}) {
     display: none;
   }
   text-align: center;
-
-  h1 {
-    padding-bottom: 0.5rem !important;
-    border-bottom: 1px solid ${props => props.theme.colors.primaryDark};
-  }
 
   a {
     text-shadow: none;
@@ -207,8 +201,15 @@ const Header = () => (
           </Logo>
           <MenuLinks />
           <div className="mobile-footer-links">
-            <Link to="/impressum">Impressum</Link>
-            <Link to="/datenschutzerklaerung">Datenschutzerklärung</Link>
+            <Link to="/impressum" activeClassName="currentActiveLink">
+              Impressum
+            </Link>
+            <Link
+              to="/datenschutzerklaerung"
+              activeClassName="currentActiveLink"
+            >
+              Datenschutzerklärung
+            </Link>
           </div>
           <p className="mobile-footer-credits">
             t.f.b.s - Telgte © {new Date().getFullYear()} | Design By @{' '}
