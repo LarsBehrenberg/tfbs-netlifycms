@@ -1,4 +1,5 @@
-@import 'variables.scss';
+@import './reset';
+@import './base';
 
 html {
   scroll-behavior: smooth;
@@ -14,46 +15,6 @@ html {
   width: 100vw;
   height: 100%;
   z-index: 0;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-/* font sizing and styling */
-p,
-.normal-text,
-li {
-  line-height: 1.5em;
-}
-
-.grey {
-  color: #00000080;
-}
-
-/* Hero */
-h1.header-title {
-  margin-bottom: 0.6rem;
-}
-
-h3.header-subtitle {
-  margin-top: 0;
-  font-size: 0.9rem;
-}
-
-/* Content */
-h2.component-title {
-  font-weight: bold;
-  margin-top: 0;
-}
-
-h4.component-subtitle {
-  text-transform: capitalize;
-  margin-top: 0;
-}
-
-h4.skill-title {
-  font-size: 0.9rem;
 }
 
 /* Timeline overwrite styles */
