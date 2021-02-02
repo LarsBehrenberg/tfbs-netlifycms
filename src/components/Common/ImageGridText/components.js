@@ -44,7 +44,7 @@ export const Content = styled.div`
         color: #000000;
       }
       &.primary {
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.primaryDark};
       }
     }
 
@@ -76,7 +76,7 @@ export const Content = styled.div`
       border-radius: 50%;
       background: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg width='19' fill='orange' height='18' viewBox='-350 -450 1750 1950' xmlns='http://www.w3.org/2000/svg'><path d='M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z'/></svg>")
           no-repeat,
-        ${props => props.theme.colors.primary}33;
+        ${props => props.theme.colors.primaryDark}33;
     }
   }
 `

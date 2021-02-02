@@ -11,7 +11,7 @@ export const Content = styled.div`
   text-align: center;
 
   .component-title {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryDark};
   }
 `
 
@@ -67,7 +67,7 @@ export const Child = styled.a`
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 
     span {
-      color: ${props => props.theme.colors.primary};
+      color: ${props => props.theme.colors.primaryDark};
     }
   }
 

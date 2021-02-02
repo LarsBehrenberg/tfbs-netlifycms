@@ -62,7 +62,7 @@ const BackgroundImage = styled.div`
       }
 
       a {
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.primaryDark};
       }
     }
   }

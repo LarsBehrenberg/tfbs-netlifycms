@@ -6,9 +6,23 @@ const theme = {
     lg: '1024px',
   },
   colors: {
-    primary: '#FF9934',
-    secondary: '#ffb75e',
-    grey: '#979797',
+    primaryDark: '#FF9934',
+    primaryLight: '#ffb75e',
+    greyLight: '#979797',
+    greyDark: '#6d6d6d',
+    blackLight: '#191919',
+    black: '#000000',
+    white: '#ffffff',
+  },
+  fontSize: {
+    nav: '0.75rem', // 12px
+    text: '1rem', // 16px
+    button: '1.125rem', // 18px
+    title: '1.125rem    ', // 18px
+    subtitle: '2.25rem', // 36px
+    newsTitle: '1.5rem', // 24px
+    textTitle: '2rem', // 32px
+    headerTitle: '4rem', // 64px
   },
   shadow: {
     standard: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',

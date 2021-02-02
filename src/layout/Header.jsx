@@ -71,7 +71,7 @@ const Wrapper = styled.div`
     background: none;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primaryDark};
     }
   }
 
@@ -110,7 +110,7 @@ const Menu = styled.div`
   }
 
   a.currentActiveLink {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primaryDark};
   }
 `
 
@@ -122,7 +122,7 @@ const StyledMobileMenu = styled(MobileMenu)`
 
   h1 {
     padding-bottom: 0.5rem !important;
-    border-bottom: 1px solid ${props => props.theme.colors.primary};
+    border-bottom: 1px solid ${props => props.theme.colors.primaryDark};
   }
 
   a {

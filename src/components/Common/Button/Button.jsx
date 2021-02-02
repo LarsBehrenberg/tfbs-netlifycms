@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
     padding-left: 8px;
     border-radius: 50%;
     margin: 0 10px 0 0;
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.primaryDark};
 
     @media screen and (min-width: 480px) {
       line-height: 1.1em;
@@ -51,7 +51,7 @@ const StyledWebLink = styled.a`
     padding-left: 8px;
     border-radius: 50%;
     margin: 0 10px 0 0;
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.primaryDark};
 
     @media screen and (min-width: 480px) {
       line-height: 1.1em;

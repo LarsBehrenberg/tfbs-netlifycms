@@ -66,7 +66,7 @@ const Content = styled.div`
   text-align: center;
 
   .component-title {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryDark};
   }
 `
 

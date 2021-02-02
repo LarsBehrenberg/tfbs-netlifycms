@@ -18,7 +18,7 @@ export const GridContainer = styled.section`
     font-weight: 700;
 
     &.form {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.primaryDark};
     }
 
     &.info {
@@ -188,7 +188,7 @@ export const InputWrapper = styled.div`
     background: #f5f4f4;
     color: ${({ theme }) => theme.colors.grey};
     border-radius: 4px;
-    outline-color: ${({ theme }) => theme.colors.primary};
+    outline-color: ${({ theme }) => theme.colors.primaryDark};
   }
   textarea {
     min-height: 10rem;
@@ -260,7 +260,7 @@ export const SubmitButton = styled.button`
     padding-top: 3px;
     border-radius: 50%;
     margin: 0 10px 0 0;
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.primaryDark};
     line-height: 0.8em;
   }
 

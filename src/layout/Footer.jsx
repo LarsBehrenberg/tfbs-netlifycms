@@ -52,11 +52,11 @@ const Menu = styled.div`
     text-decoration: none;
 
     &:hover {
-      color: ${props => props.theme.colors.primary}90;
+      color: ${props => props.theme.colors.primaryDark}90;
     }
 
     &:first-of-type {
-      color: ${props => props.theme.colors.primary};
+      color: ${props => props.theme.colors.primaryDark};
     }
   }
 
@@ -82,7 +82,7 @@ const CopyrightAndSocials = styled.div`
       background: none;
 
       &:hover {
-        color: ${props => props.theme.colors.primary}90;
+        color: ${props => props.theme.colors.primaryDark}90;
       }
     }
   }
@@ -95,12 +95,12 @@ const CopyrightAndSocials = styled.div`
       background: none;
 
       &:first-of-type {
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.primaryDark};
       }
 
       &:hover {
         svg {
-          fill: ${props => props.theme.colors.primary}90;
+          fill: ${props => props.theme.colors.primaryDark}90;
         }
       }
     }

@@ -102,7 +102,7 @@ export const StyledSlider = styled(Slider)`
 
     &.slick-current {
       svg {
-        color: ${props => props.theme.colors.primary} !important;
+        color: ${props => props.theme.colors.primaryDark} !important;
       }
     }
 
@@ -122,7 +122,7 @@ export const StyledSlider = styled(Slider)`
         transform: scale(1.03);
 
         svg {
-          color: ${props => props.theme.colors.primary} !important;
+          color: ${props => props.theme.colors.primaryDark} !important;
         }
       }
     }
@@ -173,7 +173,7 @@ export const Content = styled.div`
     margin-right: 1rem;
 
     .component-title {
-      color: ${props => props.theme.colors.primary};
+      color: ${props => props.theme.colors.primaryDark};
     }
 
     .text {
