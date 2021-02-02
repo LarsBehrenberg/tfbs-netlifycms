@@ -3,11 +3,10 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 const StyledLink = styled(Link)`
-  color: #000;
-  padding: 0.7rem 1rem;
-  background: #fff;
-  border-radius: 40px;
-  text-shadow: none;
+  color: ${({ theme }) => theme.colors.button};
+  padding: 10px 16px;
+  background: #ffffff;
+  border-radius: 2rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 
@@ -16,31 +15,31 @@ const StyledLink = styled(Link)`
     width: 22px;
     height: 22px;
     padding-left: 8px;
+    margin-right: 10px;
     border-radius: 50%;
-    margin: 0 10px 0 0;
+    /* transform: translateY(-3px); */
     background: ${props => props.theme.colors.primaryDark};
 
-    @media screen and (min-width: 480px) {
-      line-height: 1.1em;
+    svg {
+      margin-top: 4px;
     }
   }
 
   span {
     text-transform: uppercase;
-    color: #333333;
+    color: ${({ theme }) => theme.colors.blackLight};
   }
 
   &:hover {
-    box-shadow: 0 40px 45px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
   }
 `
 
 const StyledWebLink = styled.a`
-  color: #000;
-  padding: 0.7rem 1rem;
-  background: #fff;
-  border-radius: 40px;
-  text-shadow: none;
+  color: ${({ theme }) => theme.colors.button};
+  padding: 10px 16px;
+  background: #ffffff;
+  border-radius: 2rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 
@@ -49,22 +48,23 @@ const StyledWebLink = styled.a`
     width: 22px;
     height: 22px;
     padding-left: 8px;
+    margin-right: 10px;
     border-radius: 50%;
-    margin: 0 10px 0 0;
+    /* transform: translateY(-3px); */
     background: ${props => props.theme.colors.primaryDark};
 
-    @media screen and (min-width: 480px) {
-      line-height: 1.1em;
+    svg {
+      margin-top: 4px;
     }
   }
 
   span {
     text-transform: uppercase;
-    color: #333333;
+    color: ${({ theme }) => theme.colors.blackLight};
   }
 
   &:hover {
-    box-shadow: 0 40px 45px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
   }
 `
 

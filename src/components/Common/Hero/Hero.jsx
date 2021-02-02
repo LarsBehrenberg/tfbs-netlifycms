@@ -14,6 +14,9 @@ const Container = styled.div`
 `
 
 const TextContainer = styled.div`
+  p {
+    margin: 0.5rem 0 2rem;
+  }
   &.center {
     position: absolute;
     top: 0;
@@ -46,18 +49,6 @@ const TextContainer = styled.div`
           left: 50%;
           width: 100%;
           transform: translate(-28%, -50%);
-
-          h1,
-          h3 {
-            color: white;
-          }
-
-          h1 {
-          }
-
-          h3 {
-            margin-bottom: 2rem;
-          }
         }
       }
     }
@@ -65,6 +56,7 @@ const TextContainer = styled.div`
       .inner-container .oval-mask {
         width: 100vw;
         position: absolute;
+        z-index: 2;
         top: -25vw;
         bottom: -25vw;
         left: 60vw;
@@ -79,7 +71,7 @@ const TextContainer = styled.div`
           #ff9934 15.65%,
           rgba(255, 183, 94, 0.54) 81%
         );
-        z-index: 2;
+
         .content {
           top: 55%;
           height: 50%;
@@ -88,17 +80,15 @@ const TextContainer = styled.div`
           max-width: 70vw;
           overflow: hidden;
           h1,
-          h3 {
+          p {
             text-align: right;
-          }
-          h3 {
-            margin-bottom: 1em;
+            max-width: 100%;
           }
           a {
             float: right;
           }
-          h1 {
-            max-width: 100%;
+          p {
+            margin-bottom: 1rem;
           }
         }
       }
@@ -255,9 +245,7 @@ const Hero = ({
             <div className="oval-mask">
               <div className="content">
                 <h1 className="header-title">{title}</h1>
-                {subtitle ? (
-                  <h3 className="header-subtitle">{subtitle}</h3>
-                ) : null}
+                {subtitle ? <p>{subtitle}</p> : null}
                 <Button weblink={weblink} to={button_link}>
                   {button_title}
                 </Button>
@@ -268,7 +256,7 @@ const Hero = ({
           <>
             <div className="content">
               <h1>{title}</h1>
-              {subtitle ? <h3>{subtitle}</h3> : null}
+              {subtitle ? <p>{subtitle}</p> : null}
               <Button weblink={weblink} to={button_link}>
                 {button_title}
               </Button>
