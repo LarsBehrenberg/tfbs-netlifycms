@@ -3,24 +3,36 @@ import { Link } from 'gatsby'
 
 export const Container = styled.section`
   width: 100%;
-  margin: 1rem 0;
-  padding: 2rem 2rem 0;
+  margin: 3rem 0 1rem;
 `
 
 export const Content = styled.div`
   margin: 0 auto;
+  max-width: 600px;
   text-align: center;
 
-  .component-title {
+  h2 {
+    color: ${props => props.theme.colors.blackLight};
+  }
+
+  h4 {
     color: ${props => props.theme.colors.primaryDark};
+    font-weight: 500;
   }
 `
 
 export const SliderWrapper = styled.div`
-  margin-top: 2rem;
-
+  margin-top: 2.5rem;
+  * {
+  }
   .slick-track {
     padding: 0rem 0 2rem 0;
+  }
+
+  @media (min-width: 700px) {
+    .slick-track {
+      padding: 0rem 0 4rem 0;
+    }
   }
 
   .slick-dots {
@@ -45,19 +57,25 @@ export const SliderWrapper = styled.div`
 
 export const Child = styled(Link)`
   max-width: 90%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: ${props => props.theme.shadow.standard};
   border: 1px solid #99999910;
   border-radius: 0.5rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 2rem;
   text-align: center;
 
-  h3 {
-    margin-top: 0;
+  h5 {
+    color: ${props => props.theme.colors.blackLight};
+  }
+
+  p {
+    color: ${props => props.theme.colors.greyDark};
+    margin: 1.5rem 0;
   }
 
   span {
-    color: #000;
+    color: ${props => props.theme.colors.blackLight};
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   &:first-of-type {
@@ -65,7 +83,7 @@ export const Child = styled(Link)`
   }
 
   &:hover {
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: ${props => props.theme.shadow.hover};
 
     span {
       color: ${props => props.theme.colors.primaryDark};

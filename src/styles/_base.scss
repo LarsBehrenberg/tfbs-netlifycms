@@ -6,7 +6,8 @@ h1 {
 
 h2 {
   font-size: 1.125rem;
-  font-weight: 600;
+  margin-bottom: 0.725rem;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -23,4 +24,8 @@ h5 {
 
 button {
   font-size: 1.125rem;
+}
+
+p {
+  line-height: 1.625rem;
 }

@@ -15,7 +15,7 @@ const theme = {
     white: '#ffffff',
   },
   fontSize: {
-    nav: '0.9rem', // 12px
+    nav: '1rem', // 16px
     text: '1rem', // 16px
     button: '1.125rem', // 18px
     title: '1.125rem    ', // 18px
@@ -24,9 +24,10 @@ const theme = {
     textTitle: '2rem', // 32px
     headerTitle: '4rem', // 64px
   },
+  transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
   shadow: {
-    standard: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
-    hover: '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);',
+    standard: '0 15px 25px rgba(0, 0, 0, 0.2)',
+    hover: '0 30px 35px rgba(0, 0, 0, 0.1)',
   },
 }
 

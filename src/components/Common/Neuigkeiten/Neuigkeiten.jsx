@@ -35,21 +35,16 @@ const Neuigkeiten = () => {
   return (
     <Container>
       <Content>
-        <h4 className="component-subtitle">Unsere Neuigkeiten</h4>
-        <h2 className="component-title">
-          Erfahren Sie hier das Neueste von t.f.b.s - Telgte
-        </h2>
+        <h2>Neuigkeiten</h2>
+        <h4>Erfahren Sie hier das Neueste von t.f.b.s - Telgte</h4>
       </Content>
       <SliderWrapper>
         <Slider {...sliderSettings}>
           {allNeuigkeiten.map(node => {
             return (
               <Child key={node.id} to={`/${node.frontmatter.slug}`}>
-                <h3>{node.frontmatter.title}</h3>
-                <p className="grey">{`${node.frontmatter.description.substring(
-                  0,
-                  170,
-                )}...`}</p>
+                <h5>{node.frontmatter.title}</h5>
+                <p>{`${node.frontmatter.description.substring(0, 400)}...`}</p>
                 <span>Mehr hier &gt;</span>
               </Child>
             )
