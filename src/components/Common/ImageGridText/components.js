@@ -16,7 +16,7 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   width: 100%;
-  padding: 2rem 0rem 2rem 4rem;
+  padding: 2rem 0rem 2rem 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,33 +28,20 @@ export const Content = styled.div`
 
   @media screen and (max-width: 750px) {
     padding: 0 2rem 2rem;
+
+    h3 {
+    }
     /* margin-top: 2rem; */
   }
 
   .content {
-    .subtitle {
-      text-transform: uppercase;
-    }
-
-    .title {
-      font-weight: 400;
-      line-height: 1.2em;
-      margin-top: 0;
-      &.black {
-        color: #000000;
-      }
-      &.primary {
-        color: ${props => props.theme.colors.primaryDark};
-      }
-    }
-
+    max-width: 100%;
     @media (min-width: 750px) {
       max-width: 400px;
     }
 
-    h2,
-    > div {
-      margin-bottom: 1rem;
+    p {
+      margin: 1rem 0;
     }
 
     ul {
@@ -62,6 +49,7 @@ export const Content = styled.div`
       padding-left: 0;
       margin-left: 0.3em;
     }
+
     li {
       position: relative;
       padding-left: 2em; /* space to preserve indentation on wrap */
@@ -161,15 +149,12 @@ export const Grid = styled.div`
       h2,
       h4 {
         color: white;
-        margin: 0;
+        margin: 0 1rem;
       }
 
       h4 {
-        margin-top: 0.5rem;
-        margin-bottom: 0.2rem;
+        margin: 0.5rem 1rem 0;
         font-weight: 500;
-        font-size: 0.9rem;
-        text-transform: uppercase;
       }
     }
 

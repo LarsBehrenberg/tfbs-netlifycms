@@ -7,8 +7,8 @@ const ImageGrid = ({ images, grid_title, grid_subtitle }) => (
     <Grid className={grid_title ? 'four_box_grid' : 'three_box_grid'}>
       {grid_title && grid_subtitle && (
         <div className="text-container">
-          <h4>{grid_subtitle}</h4>
-          <h2>{grid_title}</h2>
+          <h2>{grid_subtitle}</h2>
+          <h4>{grid_title}</h4>
         </div>
       )}
       <div className="image-1">
