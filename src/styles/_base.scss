@@ -2,10 +2,6 @@ h1 {
   font-size: 3.5rem;
   color: #fff;
   font-weight: 500;
-
-  @media screen and (max-width: 550px) {
-    font-size: 2.5rem;
-  }
 }
 
 h2 {
@@ -39,4 +35,15 @@ li,
 ul,
 ol {
   line-height: 2rem;
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.8rem;
+  }
 }
