@@ -18,6 +18,7 @@ export { default as SingleEmployee } from './AboutPage/SingleEmployee'
 // Leistungen page
 export { default as MainSkills } from './LeistungenPage/MainSkills/MainSkills'
 export { default as SideSkills } from './LeistungenPage/SideSkills/SideSkills'
+export { default as SkillList } from './LeistungenPage/SkillList'
 
 // Skill page
 export { default as Breadcrumb } from './SkillPage/Breadcrumb'
