@@ -22,8 +22,17 @@ const FlexWrapper = styled.div`
   .breadcrumb_title {
     margin: 0;
     font-size: 1.25rem;
+
     @media screen and (max-width: 500px) {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .breadcrumbs {
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.4rem;
     }
   }
 
