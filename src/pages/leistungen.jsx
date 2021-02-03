@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import { Layout } from 'layout'
-import { Hero, MainSkills, SideSkills, ContactComponent } from 'components'
+import { Hero, SkillList, ContactComponent } from 'components'
 
 const LeistungenPage = ({ data }) => {
   const {
@@ -22,9 +22,8 @@ const LeistungenPage = ({ data }) => {
         button_title={hero_button_text.text}
         button_link={hero_button_link.text}
       />
-      <div id="leistungen" style={{ height: '2rem' }} />
-      <MainSkills skills={haupt_leistungen} />
-      <SideSkills />
+      {/* <div id="leistungen" style={{ height: '2rem' }} /> */}
+      <SkillList />
       <ContactComponent />
     </Layout>
   )
