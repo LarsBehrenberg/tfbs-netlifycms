@@ -46,23 +46,13 @@ const BackgroundImage = styled.div`
         padding-right: 1rem;
       } */
 
-      &,
-      h2,
-      h5 {
-        color: white;
-      }
-      h2 {
-        font-weight: 700;
-        margin-top: 0;
-      }
-      h5 {
-        line-height: 1.5em;
-        margin-top: 0;
-        margin-bottom: 1.2rem;
+      h4,
+      p {
+        color: ${props => props.theme.colors.white};
       }
 
-      a {
-        color: ${props => props.theme.colors.primaryDark};
+      p {
+        margin: 1rem 0 1.625rem;
       }
     }
   }
@@ -119,8 +109,8 @@ const ContactComponent = ({
       <BackgroundImage>
         <div className="content-container">
           <div className="content">
-            <h2>{title}</h2>
-            <h5>{description}</h5>
+            <h4>{title}</h4>
+            <p>{description}</p>
             <Button weblink={weblink} to={link}>
               {linkTitle}
             </Button>
