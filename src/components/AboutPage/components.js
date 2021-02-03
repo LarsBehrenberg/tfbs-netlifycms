@@ -1,14 +1,17 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import { Link } from 'gatsby'
 
 export const CardContainer = styled.div`
   display: flex;
 
-  > div:first-of-type {
+  > a:first-of-type {
     margin-right: 4rem;
   }
 
-  margin: -1.5rem 3rem 3rem;
+  max-width: 1100px;
+
+  margin: -1.5rem auto 3rem;
 
   @media screen and (max-width: 1000px) {
     margin: -1.5rem 2rem 3rem;
@@ -17,7 +20,7 @@ export const CardContainer = styled.div`
   @media screen and (max-width: 850px) {
     margin: -1.5rem 1rem 3rem;
 
-    > div:first-of-type {
+    > a:first-of-type {
       margin-right: 1rem;
     }
   }
@@ -25,11 +28,11 @@ export const CardContainer = styled.div`
   @media screen and (max-width: 750px) {
     margin: -1.5rem 4rem 3rem;
 
-    > div:first-of-type {
+    > a:first-of-type {
       margin-right: 0;
     }
 
-    > div:last-of-type {
+    > a:last-of-type {
       margin-bottom: 7rem;
     }
 
@@ -69,23 +72,15 @@ const commonCardCSS = css`
   .name,
   .subtitle {
     text-align: center;
-    margin: 1rem auto;
   }
 
   .subtitle {
-    line-height: 22px;
     font-weight: 500;
-
     text-transform: uppercase;
-
-    color: #000000;
   }
 
   .name {
-    line-height: 1.8rem;
-    text-align: center;
-
-    color: #ff9934;
+    margin-bottom: 1rem;
   }
 `
 
@@ -103,18 +98,40 @@ export const Header = styled.div`
   margin-right: -50vw;
 `
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   ${commonCardCSS}
 
+  position: relative;
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    box-shadow: ${props => props.theme.shadow.hover};
+  }
+
+  .name {
+    color: ${props => props.theme.colors.primaryDark};
+  }
+
+  .description {
+    margin-bottom: 2rem;
+  }
+
   .page_link_container {
-    margin: 0 auto -0.5rem;
-    text-align: center;
-    .page_link {
+    background-color: ${props => props.theme.colors.primaryDark};
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    span {
       color: #ffffff;
       padding: 0.35rem 0.5rem;
       text-shadow: none;
-      background: #ff9934;
-      border-radius: 50%;
 
       &:hover {
         color: #ffffff80;
@@ -124,7 +141,8 @@ export const Card = styled.div`
 `
 
 export const SingleCardContainer = styled.div`
-  margin: -3rem 0 3rem;
+  margin: -3rem auto 3rem;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   .single_card {
@@ -134,6 +152,9 @@ export const SingleCardContainer = styled.div`
 
     .name {
       margin-bottom: 2rem;
+      color: ${props => props.theme.colors.primaryDark};
+      font-weight: normal;
+      font-size: 2.5rem;
     }
 
     @media screen and (min-width: 1000px) {

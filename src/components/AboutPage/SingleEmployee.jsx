@@ -19,8 +19,8 @@ const SingleEmployee = ({ employee }) => {
               alt={name.text}
             />
           </div>
-          <h4 className="subtitle">{subtitle.text}</h4>
-          <h2 className="name">{name.text}</h2>
+          <p className="subtitle">{subtitle.text}</p>
+          <h1 className="name">{name.text}</h1>
           <div
             className="description"
             dangerouslySetInnerHTML={{ __html: description.html }}

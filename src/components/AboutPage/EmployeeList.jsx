@@ -1,7 +1,6 @@
 import React from 'react'
 import { Header, CardContainer, Card } from './components'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
 
 const EmployeeList = ({ employees }) => {
   return (
@@ -18,23 +17,21 @@ const EmployeeList = ({ employees }) => {
           } = employee
 
           return (
-            <Card key={name.text}>
+            <Card key={name.text} to={page_link.text}>
               <div className="image">
                 <Img
                   fluid={profile_image.localFile.childImageSharp.fluid}
                   alt={name.text}
                 />
               </div>
-              <h4 className="subtitle">{subtitle.text}</h4>
-              <h2 className="name">{name.text}</h2>
+              <p className="subtitle">{subtitle.text}</p>
+              <h5 className="name">{name.text}</h5>
               <div
                 className="description"
                 dangerouslySetInnerHTML={{ __html: description.html }}
               ></div>
               <div className="page_link_container">
-                <Link to={page_link.text} className="page_link">
-                  &#8594;
-                </Link>
+                <span>&#8594;</span>
               </div>
             </Card>
           )
