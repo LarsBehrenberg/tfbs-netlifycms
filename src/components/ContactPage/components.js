@@ -2,10 +2,17 @@ import styled from '@emotion/styled'
 
 export const GridContainer = styled.section`
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  @media screen and (min-width: 350px) {
+  @media screen and (min-width: 400px) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: 500px) {
     padding: 0 2rem;
   }
+
   position: relative;
   z-index: 2;
 
@@ -31,11 +38,11 @@ export const GridContainer = styled.section`
     margin-top: 0;
     margin-bottom: 2rem;
     color: ${({ theme }) => theme.colors.grey};
-    line-height: 1.4em;
+    font-size: 1.25rem;
   }
 
   grid-template-columns: 2rem 1fr 2rem;
-  grid-template-rows: 1fr 2rem min-content;
+  grid-template-rows: min-content 2rem 1fr;
 
   /* Desktop styling */
   @media screen and (min-width: 800px) {
@@ -51,8 +58,8 @@ export const BusinessInformation = styled.div`
   border: 1px solid #99999920;
 
   /* Mobile styling */
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
 
   /* Desktop styling */
   @media screen and (min-width: 800px) {
@@ -132,9 +139,13 @@ export const FormContainer = styled.div`
 
   padding: 2rem;
 
+  .subtitle {
+    max-width: 800px;
+  }
+
   /* Mobile styling */
   grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  grid-row: 3 / 4;
 
   /* Desktop styling */
   @media screen and (min-width: 800px) {
@@ -257,7 +268,7 @@ export const SubmitButton = styled.button`
     width: 22px;
     height: 22px;
     padding-left: 2px;
-    padding-top: 3px;
+    padding-top: 4.5px;
     border-radius: 50%;
     margin: 0 10px 0 0;
     background: ${props => props.theme.colors.primaryDark};
@@ -282,7 +293,7 @@ export const ContactBackground = styled.div`
   margin-right: -50vw;
   width: 100vw;
   z-index: 0;
-  background: #97979710;
+  background: #97979730;
 `
 
 export const KontaktContainer = styled.div`

@@ -25,11 +25,11 @@ const ContactForm = ({ danke }) => {
   return (
     <GridContainer>
       <FormContainer>
-        <h2 className="title form">Erreichen Sie Uns Hier</h2>
-        <h4 className="subtitle">
+        <h4 className="title form">Erreichen Sie Uns Hier</h4>
+        <p className="subtitle">
           Ob Informationen, Supervisionsanmeldungen, oder etwas ganz anderes,
           Sie erreichen uns jederzeit!
-        </h4>
+        </p>
         {!danke ? (
           <Form />
         ) : (
@@ -49,7 +49,7 @@ const ContactForm = ({ danke }) => {
         )}
       </FormContainer>
       <BusinessInformation>
-        <h2 className="title info">Kontakt</h2>
+        <h4 className="title info">Kontakt</h4>
         <div className="information">
           <div>
             <p>
