@@ -43,25 +43,15 @@ export default class SkillsContainer extends React.Component {
           {/* Text  */}
           <Content>
             <div className="content">
-              <h4 className="component-subtitle">Unsere Leistungen</h4>
-              <h2 className="component-title">
-                Erfahren Sie Mehr Über Unser Angebot
-              </h2>
+              <h2>Unsere Leistungen</h2>
+              <h4>Erfahren Sie Mehr Über Unser Angebot</h4>
               <div
-                className="normal-text grey"
+                className="text"
                 dangerouslySetInnerHTML={{
                   __html:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui amet ac sit pellentesque. Nunc duis integer tristique in quis volutpat urna, senectus ut. Lectus eu faucibus erat arcu. ',
                 }}
               />
-              {/* <div style={{ float: 'right' }}>
-                <button className="previous" onClick={this.previous}>
-                  &#x2190;
-                </button>
-                <button className="next" onClick={this.next}>
-                  &#x2192;
-                </button>
-              </div> */}
             </div>
           </Content>
 
@@ -73,37 +63,37 @@ export default class SkillsContainer extends React.Component {
                   <div className="logo">
                     <FaMedkit size="30px" color="#939393" />
                   </div>
-                  <h4 className="skill-title">apoCoaching</h4>
+                  <h5 className="skill-title">apoCoaching</h5>
                 </Child>
                 <Child to="/leistungen">
                   <div className="logo">
                     <FiRefreshCw size="27px" color="#939393" />
                   </div>
-                  <h4>Supervision / Coaching</h4>
+                  <h5>Supervision / Coaching</h5>
                 </Child>
                 <Child to="/leistungen">
                   <div className="logo">
                     <FaHandshake size="30px" color="#939393" />
                   </div>
-                  <h4 className="skill-title">Beratung</h4>
+                  <h5 className="skill-title">Beratung</h5>
                 </Child>
                 <Child to="/leistungen">
                   <div className="logo">
                     <FaGraduationCap size="30px" color="#939393" />
                   </div>
-                  <h4 className="skill-title">Fortbildung</h4>
+                  <h5 className="skill-title">Fortbildung</h5>
                 </Child>
                 <Child to="/leistungen">
                   <div className="logo">
                     <HiUserGroup size="30px" color="#939393" />
                   </div>
-                  <h4 className="skill-title">Training</h4>
+                  <h5 className="skill-title">Training</h5>
                 </Child>
                 <Child to="/leistungen">
                   <div className="logo">
                     <FaMale size="30px" color="#939393" />
                   </div>
-                  <h4 className="skill-title">Psychotherapie</h4>
+                  <h5 className="skill-title">Psychotherapie</h5>
                 </Child>
               </StyledSlider>
             </div>

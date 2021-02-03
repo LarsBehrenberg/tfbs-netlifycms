@@ -142,9 +142,11 @@ export const CarouselBackground = styled.div`
 
 export const Child = styled(Link)`
   background: none;
-  padding: 1.3rem 1rem 0;
   min-height: 180px;
   text-align: center;
+
+  /* Center Items */
+  padding-top: 30px;
 
   .logo {
     width: 70px;
@@ -153,7 +155,7 @@ export const Child = styled(Link)`
     place-content: center;
     border-radius: 50%;
     background: #99999950;
-    margin: 0 auto;
+    margin: 0 auto 15px;
   }
 `
 
@@ -172,13 +174,14 @@ export const Content = styled.div`
   .content {
     margin-right: 1rem;
 
-    .component-title {
+    h4 {
       color: ${props => props.theme.colors.primaryDark};
+      margin-bottom: 1rem;
     }
 
     .text {
-      color: #00000070;
       margin-bottom: 1rem;
+      line-height: 1.625rem;
     }
 
     button {
