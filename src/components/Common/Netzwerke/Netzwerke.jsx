@@ -7,14 +7,14 @@ import Img from 'gatsby-image'
 import { Container, SliderWrapper, Content, Child } from './components'
 
 const sliderSettings = {
-  dots: true,
+  dots: false,
   speed: 1500,
   autoplay: true,
   autoplaySpeed: 2800,
   pauseOnHover: true,
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 2,
+  slidesToScroll: 3,
   nextArrow: false,
   prevArrow: false,
   responsive: [
@@ -23,7 +23,7 @@ const sliderSettings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        dots: true,
+        dots: false,
       },
     },
     {
@@ -45,10 +45,8 @@ export default function Netzwerke() {
   return (
     <Container>
       <Content>
-        <h4 className="component-subtitle">Partner & Netzwerke</h4>
-        <h2 className="component-title">
-          Erfahren Sie Mehr Über Unsere Partner
-        </h2>
+        <h2>Partner & Netzwerke</h2>
+        <h4>Erfahren Sie Mehr Über Unsere Partner</h4>
       </Content>
       <SliderWrapper>
         <Slider {...sliderSettings}>
@@ -68,6 +66,7 @@ export default function Netzwerke() {
                     height: '100%',
                     width: '100%',
                   }}
+                  imgStyle={{ objectFit: 'contain' }}
                   objectFit="contain"
                   fluid={logo_image.localFile.childImageSharp.fluid}
                   alt={logo_image.alt}
@@ -91,8 +90,8 @@ export const query = graphql`
             alt
             localFile {
               childImageSharp {
-                fluid(maxWidth: 100) {
-                  ...GatsbyImageSharpFluid_withWebp
+                fluid(maxWidth: 200, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

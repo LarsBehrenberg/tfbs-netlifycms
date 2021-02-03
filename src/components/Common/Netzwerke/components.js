@@ -2,24 +2,29 @@ import styled from '@emotion/styled'
 
 export const Container = styled.section`
   width: 100%;
-  margin: 1rem 0;
-  padding: 2rem;
+  margin: 6rem 0 2rem;
 `
 
 export const Content = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  .component-title {
+  h4 {
     color: ${props => props.theme.colors.primaryDark};
   }
 `
 
 export const SliderWrapper = styled.div`
+  padding: 0 4rem;
+
   .slick-track {
-    padding: 0;
+    padding: 3rem 0;
     display: flex;
     align-items: center;
+  }
+
+  .slick-slide {
+    /* max-height: 100px */
   }
 
   .slick-dots {
@@ -47,6 +52,13 @@ export const Child = styled.a`
     max-width: 90%;
   } */
   max-width: 95%;
-  border-radius: 0.5rem;
-  padding: 2.3rem;
+  margin: 0 auto;
+  > div {
+    max-width: 80%;
+    margin: auto;
+  }
+  &,
+  * {
+    max-height: 130px;
+  }
 `
