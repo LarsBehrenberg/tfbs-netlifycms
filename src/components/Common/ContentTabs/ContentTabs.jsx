@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
-import { Container } from './Components'
+import { Container } from './components.js'
 import 'react-tabs/style/react-tabs.css'
 
 const ContentTabs = ({ tabs }) => {

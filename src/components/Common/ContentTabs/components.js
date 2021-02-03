@@ -2,7 +2,12 @@ import styled from '@emotion/styled'
 
 export const Container = styled.div`
   position: relative;
-  margin-top: -1.5rem;
+  margin-top: 1rem;
+
+  @media (min-width: 550px) {
+    margin-top: -1.5rem;
+  }
+
   padding: 0 0rem 2rem;
 
   @media screen and (min-width: 500px) {
@@ -39,11 +44,16 @@ export const Container = styled.div`
         margin-right: 10px;
       }
 
+      li {
+        margin-bottom: 10px;
+      }
+
       .react-tabs__tab {
         position: relative;
         z-index: 5;
         background: #fff;
-        font-size: 0.9rem;
+        /* font-size: 0.9rem; */
+        font-weight: bold;
 
         border-radius: 5px;
         border: 0.3px solid #99999910;
@@ -90,6 +100,38 @@ export const Container = styled.div`
     min-height: 400px;
     border: 1px solid #99999910;
     display: none;
+  }
+
+  .react-tabs__tab-panel {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 1rem 0;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1.17em;
+    }
+    h4 {
+      font-size: 1em;
+    }
+    h5 {
+      font-size: 0.83em;
+    }
+    h6 {
+      font-size: 0.75em;
+    }
   }
 
   .react-tabs__tab-panel--selected {

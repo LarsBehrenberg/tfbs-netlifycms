@@ -150,7 +150,6 @@ const TextContainer = styled.div`
 
       h1 {
         color: white;
-        font-weight: bold;
         margin-bottom: 1.5rem;
         max-width: 50%;
         text-align: right;
@@ -165,6 +164,7 @@ const TextContainer = styled.div`
       .content {
         h1 {
           max-width: 100%;
+          font-size: 2.5rem;
         }
       }
     }
