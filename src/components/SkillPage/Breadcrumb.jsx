@@ -16,11 +16,12 @@ const FlexWrapper = styled.div`
   position: relative;
   z-index: 2;
   height: 100%;
-  margin: 0 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
 
   .breadcrumb_title {
     margin: 0;
-
+    font-size: 1.25rem;
     @media screen and (max-width: 500px) {
       display: none;
     }
@@ -54,7 +55,7 @@ const Background = styled.div`
 const BreadCrumb = ({ currentPageTitle = 'apoCoaching', skillPage = true }) => (
   <Container>
     <FlexWrapper>
-      <h4 className="breadcrumb_title">{currentPageTitle}</h4>
+      <span className="breadcrumb_title">{currentPageTitle}</span>
       <div className="breadcrumbs">
         <Link to="/">Home</Link>
         {skillPage ? (

@@ -6,54 +6,51 @@ const Container = styled.div`
   padding: 2rem 0rem;
   position: relative;
 
-  .skill_title,
-  .skill_quote {
-    margin: 0rem;
-    @media screen and (min-width: 600px) {
+  .skill_header {
+    max-width: 1000px;
+    margin: 1rem auto 0;
+
+    @media screen and (max-width: 600px) {
       margin: 0 2rem;
     }
-  }
 
-  .skill_title {
-    display: inline-block;
-    background: -webkit-linear-gradient(
-      303.91deg,
-      #ff9934 7.57%,
-      #ffb072 94.39%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    position: relative;
-    z-index: 1;
-
-    margin-bottom: 60px;
-
-    &::after {
-      content: '';
+    .skill_title {
+      display: inline-block;
       background: -webkit-linear-gradient(
         303.91deg,
         #ff9934 7.57%,
         #ffb072 94.39%
       );
-      display: block;
-      height: 6px;
-      width: 80px;
-      bottom: -20px;
-      position: absolute;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      position: relative;
+      z-index: 1;
+
+      margin-bottom: 60px;
+
+      &::after {
+        content: '';
+        background: -webkit-linear-gradient(
+          303.91deg,
+          #ff9934 7.57%,
+          #ffb072 94.39%
+        );
+        display: block;
+        height: 6px;
+        width: 80px;
+        bottom: -20px;
+        position: absolute;
+      }
     }
-  }
 
-  .skill_quote {
-    max-width: 800px;
-    color: #00000090;
-    font-size: 0.9rem;
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 1;
-
-    p {
-      line-height: 1.6rem;
+    .skill_quote {
+      max-width: 800px;
+      color: #00000090;
+      font-size: 0.9rem;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
     }
   }
 `

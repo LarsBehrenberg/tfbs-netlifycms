@@ -18,12 +18,13 @@ const SkillPage = ({ data }) => {
       {/* <SEO title="404: Not found" /> */}
       <Breadcrumb currentPageTitle={title.text} />
       <SkillContainer>
-        <h1 className="skill_title">{title.text}</h1>
-        <div
-          className="skill_quote"
-          dangerouslySetInnerHTML={{ __html: quote.html }}
-        />
-        {/* <div className="tabs"></div> */}
+        <div className="skill_header">
+          <h1 className="skill_title">{title.text}</h1>
+          <div
+            className="skill_quote"
+            dangerouslySetInnerHTML={{ __html: quote.html }}
+          />
+        </div>
         <ContentTabs tabs={tabs} />
         <ContactComponent />
         <Background />
