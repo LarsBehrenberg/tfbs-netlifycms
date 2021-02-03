@@ -65,6 +65,10 @@ export const Container = styled.div`
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
+        &:focus:after {
+          background: none;
+        }
+
         &.react-tabs__tab--selected:after {
           content: '';
           position: absolute;
