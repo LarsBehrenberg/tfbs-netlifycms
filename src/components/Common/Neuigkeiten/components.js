@@ -69,7 +69,7 @@ export const Child = styled(Link)`
   }
 
   p {
-    color: ${props => props.theme.colors.greyDark};
+    color: ${props => props.theme.colors.grey};
     margin: 1.5rem 0;
   }
 

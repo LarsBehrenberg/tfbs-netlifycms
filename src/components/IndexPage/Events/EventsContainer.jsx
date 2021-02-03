@@ -43,10 +43,8 @@ const EventsContainer = () => {
   return (
     <Container>
       <Content>
-        <h4 className="component-subtitle">Unsere Veranstaltungen</h4>
-        <h2 className="component-title">
-          Erfahren Sie Mehr Über Unsere Veranstaltungen
-        </h2>
+        <h2>Unsere Veranstaltungen</h2>
+        <h4>Erfahren Sie Mehr Über Unsere Veranstaltungen</h4>
       </Content>
       <SliderWrapper>
         <Slider {...sliderSettings}>
@@ -79,7 +77,7 @@ const EventsContainer = () => {
                   />
                 </div>
                 <div className="event-text-wrapper">
-                  <h3 className="event-title">{title}</h3>
+                  <h5 className="event-title">{title}</h5>
                   <p className="event-description">{description}</p>
                   <p className="read-more">Mehr hier &gt;</p>
                 </div>

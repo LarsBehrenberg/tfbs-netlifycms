@@ -2,24 +2,31 @@ import styled from '@emotion/styled'
 
 export const Container = styled.section`
   width: 100%;
-  margin: 1rem 0;
-  padding: 2rem;
+  margin: 2rem 0;
 `
 
 export const Content = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  .component-title {
+  h4 {
     color: ${props => props.theme.colors.primaryDark};
   }
 `
 
 export const SliderWrapper = styled.div`
   margin-top: 2rem;
+  margin-bottom: 3rem;
 
   .slick-track {
     padding: 0rem 0 2rem 0;
+  }
+
+  @media (min-width: 500px) {
+    margin-bottom: 1rem;
+    .slick-track {
+      padding: 0rem 0 3.3rem 0;
+    }
   }
 
   .slick-dots {
@@ -44,35 +51,29 @@ export const SliderWrapper = styled.div`
 
 export const Child = styled.a`
   max-width: 90%;
-  padding: 0 2rem;
+  padding: 2rem;
   min-height: 350px;
 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  box-shadow: ${props => props.theme.shadow.standard};
   border: 1px solid #99999910;
   border-radius: 0.5rem;
 
   outline: none;
 
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
   display: flex !important;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   &:first-of-type {
     margin-left: 5%;
   }
 
   &:hover {
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: ${props => props.theme.shadow.hover};
 
-    span {
-      color: ${props => props.theme.colors.primaryDark};
-    }
-  }
-
-  &:hover {
-    box-shadow: 0px 22px 30px rgba(0, 0, 0, 0.213528);
     .read-more {
       color: orange;
     }
@@ -95,6 +96,7 @@ export const Child = styled.a`
   }
 
   .event-text-wrapper {
+    height: 100%;
     @media screen and (min-width: 550px) {
       width: 70%;
     }
@@ -110,11 +112,13 @@ export const Child = styled.a`
       overflow: hidden;
       text-overflow: ellipsis;
 
-      color: grey;
+      color: ${props => props.theme.colors.grey};
+      margin: 1.5rem 0;
     }
   }
   .read-more {
     text-align: right;
+    margin-top: auto;
     margin-bottom: 0;
     color: black;
   }
