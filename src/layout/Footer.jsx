@@ -13,7 +13,7 @@ import {
 const Container = styled.footer`
   margin: 0 auto;
   width: 100%;
-  max-width: ${({ theme }) => theme.maxWidth};
+  max-width: 1100px;
   padding: 1.45rem 1.0875rem;
 `
 
@@ -131,8 +131,8 @@ const Footer = () => {
       </Navbar>
 
       <CopyrightAndSocials>
-        <h6 className="design-by">
-          t.f.b.s - Telgte &copy; {new Date().getFullYear()} | Design By @{' '}
+        <p className="design-by">
+          t.f.b.s - Telgte &copy; {new Date().getFullYear()} | Design By @
           <a
             href="https://larsbehrenberg.com"
             target="_blank"
@@ -140,7 +140,7 @@ const Footer = () => {
           >
             Lars Behrenberg
           </a>
-        </h6>
+        </p>
         <div className="socials">
           <a
             href="https://www.facebook.com/coachingTelgte/"
