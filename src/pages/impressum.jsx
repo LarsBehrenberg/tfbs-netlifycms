@@ -1,17 +1,33 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from '@emotion/styled'
 
 import { Layout } from 'layout'
 import { Breadcrumb } from 'components'
+
+const TextContainer = styled.section`
+  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1rem 0;
+  }
+`
 
 const ImpressumPage = ({ data }) => (
   <Layout>
     {/* <SEO title="404: Not found" /> */}
     <Breadcrumb currentPageTitle="Impressum" skillPage={false} />
-    <div style={{ padding: '0 2rem' }}>
+    <TextContainer>
       <h1>Impressum</h1>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    </div>
+    </TextContainer>
   </Layout>
 )
 
