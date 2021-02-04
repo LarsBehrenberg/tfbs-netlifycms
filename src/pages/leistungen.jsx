@@ -16,11 +16,8 @@ const LeistungenPage = ({ data }) => {
     <Layout>
       {/* <SEO title="404: Not found" /> */}
       <Hero
-        ovalMaskPosition="right"
         fluid_image={hero_image.localFile.childImageSharp.fluid}
         title={hero_title.text}
-        button_title={hero_button_text.text}
-        button_link={hero_button_link.text}
       />
       {/* <div id="leistungen" style={{ height: '2rem' }} /> */}
       <SkillList />
