@@ -5,13 +5,7 @@ import { Layout } from 'layout'
 import { Hero, SkillList, ContactComponent } from 'components'
 
 const LeistungenPage = ({ data }) => {
-  const {
-    hero_title,
-    hero_button_text,
-    hero_button_link,
-    hero_image,
-    haupt_leistungen,
-  } = data.prismicLeistungen.data
+  const { hero_title, hero_image } = data.prismicLeistungen.data
   return (
     <Layout>
       {/* <SEO title="404: Not found" /> */}
