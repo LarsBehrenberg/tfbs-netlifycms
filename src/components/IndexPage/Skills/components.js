@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import Slider from 'react-slick'
-import { Link } from 'gatsby'
 
 export const sliderSettings = {
   dots: false,
@@ -127,6 +126,25 @@ export const StyledSlider = styled(Slider)`
       }
     }
   }
+
+  a {
+    background: none;
+    min-height: 180px;
+    text-align: center;
+
+    /* Center Items */
+    padding-top: 30px;
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      background: #99999950;
+      margin: 0 auto 15px;
+    }
+  }
 `
 
 export const CarouselBackground = styled.div`
@@ -138,25 +156,6 @@ export const CarouselBackground = styled.div`
   width: 100%;
   background: linear-gradient(90deg, #ff9934, #ffb072);
   border-radius: 0.5em;
-`
-
-export const Child = styled(Link)`
-  background: none;
-  min-height: 180px;
-  text-align: center;
-
-  /* Center Items */
-  padding-top: 30px;
-
-  .logo {
-    width: 70px;
-    height: 70px;
-    display: grid;
-    place-content: center;
-    border-radius: 50%;
-    background: #99999950;
-    margin: 0 auto 15px;
-  }
 `
 
 export const Content = styled.div`

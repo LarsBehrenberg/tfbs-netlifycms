@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { FaMedkit, FaHandshake, FaGraduationCap, FaMale } from 'react-icons/fa'
 import { FiRefreshCw } from 'react-icons/fi'
 import { HiUserGroup } from 'react-icons/hi'
@@ -59,42 +60,46 @@ export default class SkillsContainer extends React.Component {
           <Wrapper>
             <div className="hide-overflow">
               <StyledSlider ref={c => (this.slider = c)} {...sliderSettings}>
-                <Child to="/leistungen">
+                <Link to="/leistungen/apocoaching">
                   <div className="logo">
                     <FaMedkit size="30px" color="#939393" />
                   </div>
                   <h5 className="skill-title">apoCoaching</h5>
-                </Child>
-                <Child to="/leistungen">
+                </Link>
+                <Link to="/leistungen/supervision-coaching">
                   <div className="logo">
                     <FiRefreshCw size="27px" color="#939393" />
                   </div>
                   <h5>Supervision / Coaching</h5>
-                </Child>
-                <Child to="/leistungen">
+                </Link>
+                <Link to="/leistungen/beratung">
                   <div className="logo">
                     <FaHandshake size="30px" color="#939393" />
                   </div>
                   <h5 className="skill-title">Beratung</h5>
-                </Child>
-                <Child to="/leistungen">
+                </Link>
+                <Link to="/leistungen/fortbildungen">
                   <div className="logo">
                     <FaGraduationCap size="30px" color="#939393" />
                   </div>
                   <h5 className="skill-title">Fortbildung</h5>
-                </Child>
-                <Child to="/leistungen">
+                </Link>
+                <Link to="/leistungen/training">
                   <div className="logo">
                     <HiUserGroup size="30px" color="#939393" />
                   </div>
                   <h5 className="skill-title">Training</h5>
-                </Child>
-                <Child to="/leistungen">
+                </Link>
+                <a
+                  href="https://psychotherapie-telgte.de"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="logo">
                     <FaMale size="30px" color="#939393" />
                   </div>
                   <h5 className="skill-title">Psychotherapie</h5>
-                </Child>
+                </a>
               </StyledSlider>
             </div>
             <CarouselBackground />
