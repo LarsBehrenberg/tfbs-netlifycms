@@ -31,7 +31,23 @@ export const HeroImage = styled.div`
 
 export const HeroText = styled.div`
   position: absolute;
-  right: 2rem;
+
+  &.right {
+    right: 2rem;
+  }
+
+  &.center {
+    text-align: center;
+    @media (min-width: ${props => props.theme.media.lg}) {
+      left: 50%;
+      transform: translateX(-50%);
+
+      .text {
+        bottom: 12%;
+      }
+    }
+  }
+
   bottom: 0;
   width: 800px;
   height: 300px;
@@ -43,7 +59,7 @@ export const HeroText = styled.div`
     min-width: 800px;
 
     left: -9999px;
-    right: -9999px;
+    right: -9999px !important;
     margin: 0 auto;
   }
 

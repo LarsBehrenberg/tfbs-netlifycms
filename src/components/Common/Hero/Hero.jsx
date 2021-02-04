@@ -20,6 +20,7 @@ const sliderSettings = {
 }
 
 const Hero = ({
+  textPosition = 'right',
   fluid_image,
   images,
   title,
@@ -51,7 +52,7 @@ const Hero = ({
         </HeroImage>
       )}
 
-      <HeroText className>
+      <HeroText className={textPosition}>
         <div className="text">
           <h1>{title}</h1>
           {subtitle ? <p>{subtitle}</p> : null}

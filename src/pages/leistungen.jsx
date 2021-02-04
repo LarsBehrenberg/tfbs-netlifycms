@@ -16,6 +16,7 @@ const LeistungenPage = ({ data }) => {
     <Layout>
       {/* <SEO title="404: Not found" /> */}
       <Hero
+        textPosition="center"
         fluid_image={hero_image.localFile.childImageSharp.fluid}
         title={hero_title.text}
       />
