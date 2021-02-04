@@ -34,6 +34,33 @@ export const HeroText = styled.div`
 
   &.right {
     right: 2rem;
+
+    &.online-beratung {
+      .text {
+        left: 40%;
+        margin-left: 1rem;
+        transform: translate(-30%, -50%);
+
+        h1 {
+          margin-bottom: 1.3rem;
+        }
+
+        @media screen and (max-width: 550px) {
+          margin-left: 0;
+          bottom: -20%;
+          h1 {
+            margin-bottom: 0.6rem;
+            text-align: center;
+          }
+          a {
+            display: inline-block;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
   }
 
   &.center {

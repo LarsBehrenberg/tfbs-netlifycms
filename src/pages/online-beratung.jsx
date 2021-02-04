@@ -14,7 +14,7 @@ const OnlineBeratungPage = ({ data }) => {
   return (
     <Layout>
       <Hero
-        ovalMaskPosition="right"
+        textPosition="right online-beratung"
         fluid_image={hero_image.localFile.childImageSharp.fluid}
         title={hero_title.text}
         button_title={hero_button_text.text}
