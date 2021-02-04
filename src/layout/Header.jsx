@@ -111,6 +111,16 @@ const Menu = styled.div`
   a {
     margin-left: 1.5rem;
   }
+
+  /* .cta {
+    padding: 0.5rem 1rem;
+    border: 1px solid ${({ theme }) => theme.colors.grey};
+    transition: ${({ theme }) => theme.transition};
+
+    &:hover {
+      border: 1px solid ${({ theme }) => theme.colors.primaryDark};
+    }
+  } */
 `
 
 const StyledMobileMenu = styled(MobileMenu)`
@@ -178,7 +188,7 @@ const MenuLinks = () => (
     <Link to="/ueber-uns" activeClassName="currentActiveLink">
       Über uns
     </Link>
-    <Link to="/kontakt" activeClassName="currentActiveLink">
+    <Link to="/kontakt" className="cta" activeClassName="currentActiveLink">
       Kontakt
     </Link>
   </>
