@@ -9,7 +9,6 @@ import {
   Wrapper,
   CarouselBackground,
   StyledSlider,
-  Child,
   Container,
   Content,
 } from './components'
