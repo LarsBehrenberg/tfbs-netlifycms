@@ -62,7 +62,8 @@ export const BackButton = styled(Link)`
 `
 
 export const Content = styled.div`
-  margin: -1.5rem 0 3rem;
+  margin: -1.5rem auto 3rem;
+  max-width: 1000px;
   position: relative;
   background: #fff;
   z-index: 2;
