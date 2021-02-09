@@ -47,7 +47,6 @@ const Container = styled.div`
     .skill_quote {
       max-width: 800px;
       color: #00000090;
-      font-size: 0.9rem;
       margin-bottom: 4rem;
       position: relative;
       z-index: 1;
