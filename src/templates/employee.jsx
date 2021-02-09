@@ -8,8 +8,10 @@ const EmployeePage = ({ data }) => {
   const employee = data.prismicEmployee.data
 
   return (
-    <Layout>
-      {/* <SEO title="404: Not found" /> */}
+    <Layout
+      title={employee.name.text}
+      description={`${employee.description.text.substring(0, 200)}...`}
+    >
       <SingleEmployee employee={employee} />
       <ContactComponent />
     </Layout>
@@ -30,6 +32,7 @@ export const query = graphql`
         }
         description {
           html
+          text
         }
         profile_image {
           localFile {

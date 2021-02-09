@@ -1,12 +1,12 @@
+const config = require('./src/config/site')
+
 require('dotenv').config({
   path: `.env`,
 })
 
 module.exports = {
   siteMetadata: {
-    title: `t.f.b.s - Telgte`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@larsbehrenberg`,
+    ...config,
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -99,18 +99,21 @@ module.exports = {
     },
     // SEO
     'gatsby-plugin-react-helmet',
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/favicon.jpg`, // This path is relative to the root of the site.
-    //   },
-    // },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.title,
+        short_name: config.shortName,
+        description: config.description,
+        start_url: config.pathPrefix,
+        banner: config.banner,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'standalone',
+        icon: config.favicon,
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

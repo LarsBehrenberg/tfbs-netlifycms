@@ -21,8 +21,10 @@ const TextContainer = styled.section`
 `
 
 const DatenschutzerklaerungPage = ({ data }) => (
-  <Layout>
-    {/* <SEO title="404: Not found" /> */}
+  <Layout
+    title="Datenschutzerklärung"
+    description="Seit 2000 ist t.f.b.s. – Telgte tätig mit den Schwerpunkten Arbeits- und Organisationspsychologie, Coaching und Supervision, Apothekenberatung ..."
+  >
     <Breadcrumb currentPageTitle="Datenschutzerklärung" skillPage={false} />
     <TextContainer>
       <h1>Datenschutzerklärung</h1>

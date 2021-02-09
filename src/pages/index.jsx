@@ -9,7 +9,7 @@ import {
   ImageGridText,
   ContactComponent,
   Neuigkeiten,
-  Netzwerke
+  Netzwerke,
 } from 'components'
 
 const IndexPage = ({ data }) => {
@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
   } = data.prismicHomepageBodyThreeboxcomponent.primary
 
   return (
-    <Layout>
+    <Layout description="Seit 2000 ist t.f.b.s. – Telgte tätig mit den Schwerpunkten Arbeits- und Organisationspsychologie, Coaching und Supervision, Apothekenberatung ...">
       <Hero
         ovalMaskPosition="center"
         images={hero_images}

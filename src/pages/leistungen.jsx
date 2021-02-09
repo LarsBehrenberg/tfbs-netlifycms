@@ -7,7 +7,10 @@ import { Hero, SkillList, ContactComponent } from 'components'
 const LeistungenPage = ({ data }) => {
   const { hero_title, hero_image } = data.prismicLeistungen.data
   return (
-    <Layout>
+    <Layout
+      title="Leistungen"
+      description="Seit 2000 ist t.f.b.s. – Telgte tätig mit den Schwerpunkten Arbeits- und Organisationspsychologie, Coaching und Supervision, Beratung inhabergeführter Familienunternehmen, Apothekenberatung, Teamentwicklung, Personalentwicklung, Strategieplanung, Schulentwicklung & Psychotherapie."
+    >
       {/* <SEO title="404: Not found" /> */}
       <Hero
         textPosition="center"

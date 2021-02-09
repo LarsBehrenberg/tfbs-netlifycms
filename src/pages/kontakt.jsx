@@ -9,8 +9,10 @@ import {
 } from 'components'
 
 const KontaktPage = () => (
-  <Layout>
-    {/* <SEO title="404: Not found" /> */}
+  <Layout
+    title="Kontakt"
+    description="Ob Informationen, Supervisionsanmeldungen, oder etwas ganz anderes, Sie erreichen uns jederzeit! Ob Coaching und Supervision, Beratung inhabergeführter Familienunternehmen, Apothekenberatung, Teamentwicklung, Personalentwicklung, Strategieplanung, Schulentwicklung & Psychotherapie."
+  >
     <KontaktContainer>
       <ContactForm />
       <Map />

@@ -14,8 +14,10 @@ const SkillPage = ({ data }) => {
   const { title, quote, tabs } = data.prismicSkill.data
 
   return (
-    <Layout>
-      {/* <SEO title="404: Not found" /> */}
+    <Layout
+      title={title.text}
+      description={`${quote.text.substring(0, 200)}...`}
+    >
       <Breadcrumb currentPageTitle={title.text} />
       <SkillContainer>
         <div className="skill_header">
@@ -44,6 +46,7 @@ export const query = graphql`
         }
         quote {
           html
+          text
         }
         tabs {
           tab_title {

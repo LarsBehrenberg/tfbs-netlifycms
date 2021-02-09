@@ -7,8 +7,10 @@ import { ImageGridText, EmployeeList, ContactComponent } from 'components'
 const UeberUnsPage = ({ data }) => {
   const { employees } = data.prismicUberUns.data
   return (
-    <Layout>
-      {/* <SEO title="404: Not found" /> */}
+    <Layout
+      title="Über uns"
+      description="Seit über 20 Jahren ist t.f.b.s. - Telgte tätig mit Schwerpunkten wie Arbeits- und Organisationspsychologie Beratung inhabergeführter Familienunternehmen, Apothekenberatung und vielem mehr."
+    >
       <EmployeeList employees={employees} />
       <ImageGridText />
       <ContactComponent />

@@ -21,8 +21,10 @@ const TextContainer = styled.section`
 `
 
 const ImpressumPage = ({ data }) => (
-  <Layout>
-    {/* <SEO title="404: Not found" /> */}
+  <Layout
+    title="Impressum"
+    description="Seit 2000 ist t.f.b.s. – Telgte tätig mit den Schwerpunkten Arbeits- und Organisationspsychologie, Coaching und Supervision, Apothekenberatung ..."
+  >
     <Breadcrumb currentPageTitle="Impressum" skillPage={false} />
     <TextContainer>
       <h1>Impressum</h1>

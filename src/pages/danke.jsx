@@ -1,11 +1,14 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 import { Layout } from 'layout'
 import { ContactForm, Map } from 'components'
 
 const DankePage = () => (
-  <Layout>
-    {/* <SEO title="404: Not found" /> */}
+  <Layout title="Kontakt">
+    <Helmet>
+      <meta name="robots" content="noindex, follow" />
+    </Helmet>
     <ContactForm danke />
     <Map />
   </Layout>

@@ -1,3 +1,6 @@
+// SEO
+export { default as SEO } from './SEO'
+
 // Common
 export { default as ImageGridText } from './Common/ImageGridText/Main'
 export { default as Button } from './Common/Button/Button'

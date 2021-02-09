@@ -12,7 +12,10 @@ const OnlineBeratungPage = ({ data }) => {
     hero_image,
   } = data.prismicOnlineBeratung.data
   return (
-    <Layout>
+    <Layout
+      title="Online Beratung"
+      description="Im digitalen Kalender Ihren Wunschtermin auswählen, gewählter Wunschtermin wird von uns per Email bestätigt und mit eventuellen Rückfragen versehen, am Tag des Gesprächs bekommen Sie von uns eine Email mit dem Beitrittslink zur Video- oder Audiokonferenz, Ohne jegliches Registrieren am Gespräch teilnehmen"
+    >
       <Hero
         textPosition="right online-beratung"
         fluid_image={hero_image.localFile.childImageSharp.fluid}

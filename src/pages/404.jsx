@@ -1,24 +1,39 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
 import { Layout } from 'layout'
 
 const Placeholder = styled.div`
-  height: 70vh;
+  height: 53vh;
   width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
 
-  display: flex;
+  display: grid;
+  place-content: center;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  h1 {
+    color: ${props => props.theme.colors.black};
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: ${props => props.theme.colors.primaryDark};
+  }
 `
 
 const NotFoundPage = () => (
-  <Layout>
-    {/* <SEO title="404: Not found" /> */}
+  <Layout title="404 - Not found">
+    <Helmet>
+      <meta name="robots" content="noindex" />
+    </Helmet>
     <Placeholder>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <h1>404 | NOT FOUND</h1>
+      <p>
+        Leider nichts gefunden... Finde hier <Link to="/">zurück</Link>!
+      </p>
     </Placeholder>
   </Layout>
 )

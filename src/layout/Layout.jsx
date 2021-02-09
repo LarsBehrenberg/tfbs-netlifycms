@@ -2,8 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { ThemeProvider } from '@emotion/react'
 import theme from './theme'
-import Header from './Header'
-import Footer from './Footer'
+import { SEO } from 'components'
+import { Header, Footer } from 'layout'
 
 // Styles
 import '../styles/index.scss'
@@ -16,9 +16,10 @@ const ContentWrapper = styled.div`
   position: relative;
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title, description }) => {
   return (
     <ThemeProvider theme={theme}>
+      <SEO title={title} description={description} />
       <div id="childWrapper">
         <Header />
         <ContentWrapper>{children}</ContentWrapper>

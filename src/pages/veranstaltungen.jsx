@@ -5,9 +5,10 @@ import { Neuigkeiten, Timeline, BackButton } from 'components'
 import { Header } from '../components/NeuigkeitenPage/components'
 
 const VeranstaltungenPage = () => (
-  <Layout>
-    {/* <SEO title="404: Not found" /> */}
-
+  <Layout
+    title="Veranstaltungen & Neuigkeiten"
+    descrpition="Wir freuen uns darauf, Sie bei unseren Veranstaltungen begrüßen zu dürfen. Bei Fragen oder weiteren Themenwünschen kontaktieren Sie uns gerne!"
+  >
     <Header>
       <div className="wrapper">
         <BackButton />

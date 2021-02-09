@@ -9,17 +9,20 @@ import { BackButton } from 'components'
 import ContactComponent from '../components/Common/ContactComponent/ContactComponent'
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark } = data
   return (
-    <Layout>
+    <Layout
+      title={markdownRemark.frontmatter.title}
+      description={markdownRemark.frontmatter.description}
+    >
       <Header>
         <div className="wrapper">
           <BackButton to="/veranstaltungen" />
         </div>
       </Header>
       <Content>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <h1>{markdownRemark.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }}></div>
       </Content>
       <ContactComponent />
     </Layout>
