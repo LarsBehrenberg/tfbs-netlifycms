@@ -7,7 +7,7 @@ import { ContactForm, Map } from 'components'
 const DankePage = () => (
   <Layout title="Kontakt">
     <Helmet>
-      <meta name="robots" content="noindex, follow" />
+      <meta name="robots" content="noindex" />
     </Helmet>
     <ContactForm danke />
     <Map />
