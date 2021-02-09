@@ -136,6 +136,18 @@ export const Container = styled.div`
     h6 {
       font-size: 0.75em;
     }
+
+    ul,
+    ol {
+      list-style: initial;
+
+      padding: 0 0 0 1rem;
+
+      li {
+        line-height: 1.625rem;
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 
   .react-tabs__tab-panel--selected {
