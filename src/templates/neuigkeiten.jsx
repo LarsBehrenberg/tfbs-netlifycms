@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../layout/Layout'
-import {
-  Header,
-  BackButton,
-  Content,
-} from '../components/NeuigkeitenPage/components'
+import { Header, Content } from '../components/NeuigkeitenPage/components'
+
+import { BackButton } from 'components'
 
 import ContactComponent from '../components/Common/ContactComponent/ContactComponent'
 
@@ -16,11 +14,13 @@ const BlogPost = ({ data }) => {
     <Layout>
       <Header>
         <div className="wrapper">
-          <BackButton to="/veranstaltungen">&#8592;</BackButton>
-          <h1>{post.frontmatter.title}</h1>
+          <BackButton to="/veranstaltungen" />
         </div>
       </Header>
-      <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Content>
+        <h1>{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      </Content>
       <ContactComponent />
     </Layout>
   )

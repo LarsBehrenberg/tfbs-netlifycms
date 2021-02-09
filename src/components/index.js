@@ -6,6 +6,7 @@ export { default as ContentTabs } from './Common/ContentTabs/ContentTabs'
 export { default as Hero } from './Common/Hero/Hero'
 export { default as Neuigkeiten } from './Common/Neuigkeiten/Neuigkeiten'
 export { default as Netzwerke } from './Common/Netzwerke/Netzwerke'
+export { default as BackButton } from './Common/BackButton'
 
 // Index page
 export { default as SkillsContainer } from './IndexPage/Skills/SkillsContainer'

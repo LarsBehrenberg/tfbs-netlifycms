@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Layout } from 'layout'
-import { Neuigkeiten, Timeline } from 'components'
-import { Header, BackButton } from '../components/NeuigkeitenPage/components'
+import { Neuigkeiten, Timeline, BackButton } from 'components'
+import { Header } from '../components/NeuigkeitenPage/components'
 
 const VeranstaltungenPage = () => (
   <Layout>
@@ -10,7 +10,7 @@ const VeranstaltungenPage = () => (
 
     <Header>
       <div className="wrapper">
-        <BackButton to="/">&#8592;</BackButton>
+        <BackButton />
         <h1>Neuigkeiten &amp; Veranstaltungen</h1>
       </div>
     </Header>
