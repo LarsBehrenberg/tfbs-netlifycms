@@ -75,6 +75,23 @@ const Wrapper = styled.div`
 
     &.currentActiveLink {
       color: ${({ theme }) => theme.colors.primaryDark};
+      position: relative;
+
+      @media (min-width: ${({ theme }) => theme.media.lg}) {
+        ::after {
+          content: '';
+          background: -webkit-linear-gradient(
+            303.91deg,
+            #ff9934 7.57%,
+            #ffb072 94.39%
+          );
+          display: block;
+          height: 3px;
+          width: 100%;
+          bottom: -30px;
+          position: absolute;
+        }
+      }
     }
   }
 
