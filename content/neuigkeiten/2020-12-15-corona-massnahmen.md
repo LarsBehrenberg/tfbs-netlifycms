@@ -2,21 +2,19 @@
 templateKey: neuigkeiten
 title: Unsere Corona Massnahmen | Dezember 2020
 slug: corona
-description: >-
-  I have always been fascinated by British history.
-
-
-  But I found it inaccessible: for one thing, it is terribly complicated (so many kings, queens, battles, discoveries, inventions, achievements ...); and, for another, it is not usually taught in a manner which brings it to life.
-
-
-  So I decided to set up a small website devoted to the Greatest Britons. There have been various polls over the years seeking to identify who really is the *greatest*. And so this seems like a good way to improve my knowledge.
-
-
-  That was 10 years ago. Since then, I've read books on British history, written, watched documentaries and films, written and read a bit more, designed this website, written a bit more, and found some other authors to help me.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra tellus. Neque sodales ut etiam sit amet. Faucibus a pellentesque sit amet porttitor eget dolor. Eget nullam non nisi est sit amet facilisis magna etiam. Etiam sit amet nisl purus.
 ---
 
-But I found it inaccessible: for one thing, it is terribly complicated (so many kings, queens, battles, discoveries, inventions, achievements ...); and, for another, it is not usually taught in a manner which brings it to life.
-
-So I decided to set up a small website devoted to the Greatest Britons. There have been various polls over the years seeking to identify who really is the _greatest_. And so this seems like a good way to improve my knowledge.
-
-That was 10 years ago. Since then, I've read books on British history, written, watched documentaries and films, written and read a bit more, designed this website, written a bit more, and found some other authors to help me.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra tellus. Neque sodales ut etiam sit amet. Faucibus a pellentesque sit amet porttitor eget dolor. Eget nullam non nisi est sit amet facilisis magna etiam. Etiam sit amet nisl purus. Posuere lorem ipsum dolor sit amet consectetur. Vulputate odio ut enim blandit volutpat. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Arcu bibendum at varius vel pharetra vel turpis nunc. Ultrices in iaculis nunc sed augue lacus. Justo nec ultrices dui sapien eget mi. Hendrerit gravida rutrum quisque non tellus. Ipsum nunc aliquet bibendum enim facilisis. Eget nunc lobortis mattis aliquam faucibus purus. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Quis varius quam quisque id diam vel quam elementum.
+\
+\
+Porta non pulvinar neque laoreet suspendisse. Aliquet bibendum enim facilisis gravida neque convallis. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Vivamus at augue eget arcu dictum varius duis at. Eu sem integer vitae justo eget. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Massa massa ultricies mi quis hendrerit dolor magna. Cursus sit amet dictum sit amet justo donec. Nibh ipsum consequat nisl vel pretium lectus. Eros in cursus turpis massa tincidunt dui. Fames ac turpis egestas sed.
+\
+\
+Aliquam sem et tortor consequat. Sit amet dictum sit amet justo donec enim diam. Nulla facilisi etiam dignissim diam quis enim lobortis. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta. Fringilla urna porttitor rhoncus dolor purus non. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Aliquam malesuada bibendum arcu vitae elementum. Nisl tincidunt eget nullam non. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Augue lacus viverra vitae congue. Arcu cursus vitae congue mauris rhoncus aenean. Risus nec feugiat in fermentum posuere urna. A diam maecenas sed enim ut sem viverra. A arcu cursus vitae congue mauris rhoncus aenean vel. Placerat duis ultricies lacus sed turpis tincidunt.
+\
+\
+Proin sagittis nisl rhoncus mattis. Nunc congue nisi vitae suscipit. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Tempor orci eu lobortis elementum nibh tellus. Quis risus sed vulputate odio ut enim. Lectus mauris ultrices eros in cursus turpis massa. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. Amet risus nullam eget felis eget. Ac tincidunt vitae semper quis. Feugiat scelerisque varius morbi enim nunc faucibus. Eu non diam phasellus vestibulum.
+\
+\
+Leo integer malesuada nunc vel risus commodo. Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Adipiscing vitae proin sagittis nisl. Id interdum velit laoreet id donec. Ut tristique et egestas quis ipsum suspendisse ultrices. Nulla malesuada pellentesque elit eget gravida cum. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Lectus quam id leo in. Massa sapien faucibus et molestie ac feugiat sed. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Cum sociis natoque penatibus et.
