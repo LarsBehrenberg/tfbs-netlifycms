@@ -48,8 +48,11 @@ export const Content = styled.div`
     margin-bottom: 60px;
     font-size: 2.7rem;
 
-    background: ${props =>
-      `-webkit-linear-gradient(303.91deg, ${props.theme.colors.primaryDark}, ${props.theme.colors.primaryLight}90)`};
+    background: -webkit-linear-gradient(
+      303.91deg,
+      #ff9934 7.57%,
+      #ffb072 94.39%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,6 +70,15 @@ export const Content = styled.div`
       bottom: -20px;
       position: absolute;
     }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 1rem 0;
   }
 
   @media screen and (min-width: 1000px) {

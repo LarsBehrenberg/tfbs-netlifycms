@@ -115,7 +115,8 @@ export const Container = styled.div`
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    p {
       margin: 1rem 0;
     }
     h1 {
