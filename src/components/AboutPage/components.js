@@ -157,6 +157,20 @@ export const SingleCardContainer = styled.div`
       font-size: 2.5rem;
     }
 
+    .description ul,
+    .description ol {
+      list-style: initial;
+
+      @media screen and (max-width: 1000px) {
+        padding: 0 1rem;
+      }
+
+      li {
+        line-height: 1.625rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
     @media screen and (min-width: 1000px) {
       padding: 0 4rem 3rem;
     }
